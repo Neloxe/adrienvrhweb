@@ -11,3 +11,31 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "SFProRegular";
+  src: local("SFPRODISPLAYREGULAR"),
+    url("./fonts/SFPro/SFPRODISPLAYREGULAR.OTF") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "SFProMedium";
+  src: local("SFPRODISPLAYMEDIUM"),
+    url("./fonts/SFPro/SFPRODISPLAYMEDIUM.OTF") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "SFProBold";
+  src: local("SFPRODISPLAYBOLD"),
+    url("./fonts/SFPro/SFPRODISPLAYBOLD.OTF") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "JetBrainsMono";
+  src: local("JetBrainsMono-Bold"),
+    url("./fonts/JetBrains/JetBrainsMono-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
