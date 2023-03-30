@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable no-unused-vars */
@@ -133,7 +134,7 @@ function SecondYear({ lastRef }) {
         <div
           style={{
             width: 2,
-            height: 800,
+            height: 650,
             marginLeft: 100,
             marginRight: 100,
             backgroundColor: COLORS.white,
@@ -145,7 +146,7 @@ function SecondYear({ lastRef }) {
       <div
         style={{
           flexDirection: 'column',
-          height: 800,
+          height: 650,
         }}
       >
         <div
@@ -226,9 +227,7 @@ function SecondYear({ lastRef }) {
                 <div>Langage · C++</div>
               </div>
               <div style={{ color: COLORS.grey, paddingTop: 10 }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Purus viverra accumsan in nisl nisi scelerisque eu ultrices.{' '}
+                Extension des compétences vues en C en première année.
               </div>
             </div>
             <div
@@ -249,9 +248,7 @@ function SecondYear({ lastRef }) {
                 <div>Langage · JavaScript</div>
               </div>
               <div style={{ color: COLORS.grey, paddingTop: 10 }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Purus viverra accumsan in nisl nisi scelerisque eu ultrices.{' '}
+                Extension des compétences acquises à BetterCallDave.
               </div>
             </div>
           </div>
@@ -292,9 +289,7 @@ function SecondYear({ lastRef }) {
                 <div>Mathématiques</div>
               </div>
               <div style={{ color: COLORS.grey, paddingTop: 10 }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Purus viverra accumsan in nisl nisi scelerisque eu ultrices.{' '}
+                Travail sur des mathématiques discrètes et algébrique.
               </div>
             </div>
             <div ref={lastRef} id={4} className={4}>
@@ -302,9 +297,8 @@ function SecondYear({ lastRef }) {
                 <div>Physique</div>
               </div>
               <div style={{ color: COLORS.grey, paddingTop: 10 }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Purus viverra accumsan in nisl nisi scelerisque eu ultrices.{' '}
+                Travail sur de l'éléctronique numérique, de l'éléctromagnétisme
+                et de la physique des ondes.
               </div>
             </div>
           </div>

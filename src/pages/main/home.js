@@ -5,11 +5,15 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { useEffect } from 'react'
 import anime from 'animejs/lib/anime.es.js'
+import Lottie from 'lottie-react'
 import phone from '../../svg/PHONE.svg'
 import back from '../../svg/BACK.svg'
 import { COLORS, SIZE } from '../../export/style'
+import mouse from '../../lottie/MOUSE.json'
 
 function Home() {
+  let scroll = false
+
   useEffect(() => {
     let element = document.getElementsByClassName('text-animation')[0]
     element.innerHTML = element.textContent.replace(
@@ -63,51 +67,31 @@ function Home() {
         duration: 1500,
         easing: 'easeOutExpo',
       })
+      anime({
+        targets: document.getElementsByClassName('mouse'),
+        opacity: [0, 1],
+        delay: 2000,
+        duration: 500,
+        easing: 'easeOutExpo',
+      })
+      setTimeout(() => {
+        scroll = false
+      }, 2000)
     }, 1750)
 
-    // document.addEventListener('mousemove', (event) => {
-    //   const originX = window.innerWidth / 2
-    //   const originY = window.innerHeight / 2
-
-    //   let X =
-    //     originX +
-    //     (event.clientX > originX
-    //       ? event.clientX - originX
-    //       : -(originX - event.clientX)) *
-    //       0.05
-    //   let Y =
-    //     originY +
-    //     (event.clientY > originY
-    //       ? event.clientY - originY
-    //       : -(originY - event.clientY)) *
-    //       0.05
-    //   anime({
-    //     targets: phonePos,
-    //     animX: X,
-    //     animY: Y,
-    //     round: 0.5,
-    //     // easing: 'linear',
-    //     duration: 200,
-    //     update() {
-    //       // setPhonePosX(phonePos.animX)
-    //       // setPhonePosY(phonePos.animY)
-    //     },
-    //   })
-    // })
+    document.addEventListener('scroll', (event) => {
+      if (!scroll) {
+        scroll = true
+        anime({
+          targets: document.getElementsByClassName('mouse'),
+          opacity: [1, 0],
+          translateY: [0, 40],
+          duration: 500,
+          easing: 'easeOutExpo',
+        })
+      }
+    })
   }, [])
-
-  const styles = {
-    phone: {
-      width: 300,
-      transform: 'translateX(-50px)',
-      // position: 'absolute',
-      // left: phonePosX,
-      // top: phonePosY,
-      // marginLeft: 'auto',
-      // marginRight: 'auto',
-      // transform: 'translate(-50%,-50%)',
-    },
-  }
 
   return (
     <div
@@ -121,23 +105,6 @@ function Home() {
         alignContent: 'center',
       }}
     >
-      {/* <img
-        src={back}
-        style={{
-          objectFit: 'cover',
-
-          objectPosition: '5px 10%',
-          width: '100%',
-          height: '100%',
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          marginLeft: 'auto',
-          marginRight: 'auto',
-        }}
-        alt="website logo"
-      /> */}
       <div
         style={{
           display: 'flex',
@@ -154,10 +121,6 @@ function Home() {
             letterSpacing: '-15px',
             fontSize: 200,
             zIndex: 1,
-            // background:
-            //   'linear-gradient(to bottom right, #93F5EC 20%, #A77BF3 84%)',
-            // '-webkit-background-clip': 'text',
-            // '-webkit-text-fill-color': 'transparent',
           }}
         >
           Student <br style={{ backgroundColor: COLORS.grey }} /> Developer
@@ -189,6 +152,12 @@ function Home() {
           Adrien Verhaeghe
         </div>
         {/* <img src={phone} style={styles.phone} alt="website logo" /> */}
+      </div>
+      <div
+        className="mouse"
+        style={{ position: 'absolute', bottom: 10, opacity: 0 }}
+      >
+        <Lottie style={{ width: 60 }} animationData={mouse} />
       </div>
     </div>
   )

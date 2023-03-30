@@ -75,7 +75,6 @@ const styles = {
 
 const Mouse = forwardRef((props, ref) => {
   function Entry() {
-    console.log('entry')
     anime({
       targets: document.getElementById('mouse-follow'),
       opacity: [0, 1],
@@ -84,7 +83,6 @@ const Mouse = forwardRef((props, ref) => {
     })
   }
   function Exit() {
-    console.log('exit')
     anime({
       targets: document.getElementById('mouse-follow'),
       opacity: [1, 0],

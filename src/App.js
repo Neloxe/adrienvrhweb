@@ -1,13 +1,19 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect } from 'react'
 import './App.css'
+import Lottie from 'lottie-react'
 import Head from './components/header'
 import { COLORS } from './export/style'
-import bio from './svg/BIO.svg'
-import projets from './svg/PROJETS.svg'
 import Chapter from './components/chapter'
 import Home from './pages/main/home'
 import Tree from './pages/main/tree'
 import Project from './pages/main/project'
+import phone from './lottie/PHONE.json'
+import Contact from './pages/main/contact'
+
+import { ReactComponent as Bio } from './svg/BIO.svg'
+import { ReactComponent as Projets } from './svg/PROJETS.svg'
+import { ReactComponent as ContactIcon } from './svg/CONTACT.svg'
 
 const styles = {
   app: {
@@ -23,17 +29,57 @@ const styles = {
 function App() {
   useEffect(() => {
     document.title = 'Adrien Verhaeghe'
+    console.log(window.innerWidth)
   }, [])
   return (
     <div style={styles.app}>
-      <div>
-        <Head />
-        <Home />
-        <Chapter text="Bio" logo={bio} />
-        <Tree />
-        <Chapter text="Projets" logo={projets} />
-        <Project />
-      </div>
+      {window.innerWidth > 1000 ? (
+        <div>
+          <Head />
+          <Home />
+          <Chapter id="bio" text="Bio">
+            <Bio
+              style={{ height: 20, paddingLeft: 7.5, paddingRight: 7.5 }}
+              fill={COLORS.white}
+            />
+          </Chapter>
+          <Tree />
+          <Chapter id="project" text="Application · Frame It">
+            <Projets
+              style={{ height: 20, paddingLeft: 7.5, paddingRight: 7.5 }}
+              fill={COLORS.white}
+            />
+          </Chapter>
+          <Project />
+          <Chapter id="contact" text="Contact">
+            <ContactIcon
+              style={{ height: 20, paddingLeft: 7.5, paddingRight: 7.5 }}
+              fill={COLORS.white}
+            />
+          </Chapter>
+          <Contact />
+        </div>
+      ) : (
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignContent: 'center',
+            alignItems: 'center',
+            width: '100%',
+            height: '100%',
+            flexDirection: 'column',
+            backgroundColor: COLORS.lightBlack,
+            fontFamily: 'SFProBold',
+            textAlign: 'center',
+          }}
+        >
+          <Lottie style={{ width: 100 }} animationData={phone} />
+          <div>
+            En cours de développement <br /> sur mobile...
+          </div>
+        </div>
+      )}
     </div>
   )
 }

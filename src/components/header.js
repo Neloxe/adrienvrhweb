@@ -1,13 +1,15 @@
+/* eslint-disable react/no-unknown-property */
 /* eslint-disable no-unused-vars */
 /* eslint-disable import/extensions */
 /* eslint-disable react/react-in-jsx-scope */
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import anime from 'animejs/lib/anime.es.js'
 import { COLORS } from '../export/style'
-import projets from '../svg/PROJETS.svg'
-import bio from '../svg/BIO.svg'
-import contact from '../svg/CONTACT.svg'
-import rotate from '../svg/ROTATE.svg'
+import Button from './button'
+import { ReactComponent as Projets } from '../svg/PROJETS.svg'
+import { ReactComponent as Contact } from '../svg/CONTACT.svg'
+import { ReactComponent as Bio } from '../svg/BIO.svg'
+import { ReactComponent as Rotate } from '../svg/ROTATE.svg'
 
 const styles = {
   header: {
@@ -34,19 +36,27 @@ const styles = {
     justifyContent: 'center',
     alignContent: 'center',
     display: 'flex',
-    padding: 7.5,
+    padding: 9,
   },
   selected: {
-    backgroundColor: 'rgba(19, 19, 19, 1)',
-    borderStyle: 'solid',
-    borderWidth: 1,
-    borderColor: 'rgba(49, 49, 49, 1)',
+    backgroundColor: COLORS.white,
+    color: COLORS.lightBlack,
+    borderRadius: 40,
+    // borderColor: 'rgba(49, 49, 49, 1)',
   },
 }
 
 function Head() {
   let oldScroll = 0
   let hide = false
+  const [project, setProject] = useState(false)
+  const [contact, setContact] = useState(false)
+  const [bio, setBio] = useState(false)
+  const [rotate, setRotate] = useState(false)
+
+  const projectElement = document.getElementById('project')
+  const bioElement = document.getElementById('bio')
+  const contactElement = document.getElementById('contact')
 
   useEffect(() => {
     anime.timeline({ loop: false }).add({
@@ -57,7 +67,7 @@ function Head() {
       duration: 1500,
       easing: 'easeOutExpo',
     })
-    window.onscroll = function () {
+    window.onscroll = function hover() {
       const newValue = window.pageYOffset
       if (oldScroll - newValue > 0 && hide === true) {
         hide = false
@@ -88,7 +98,6 @@ function Head() {
       style={{
         ...styles.header,
       }}
-      onClick={() => {}}
     >
       <div
         style={{
@@ -101,10 +110,13 @@ function Head() {
         <div style={{ display: 'flex', flexDirection: 'row' }}>
           <div style={{ ...styles.block, marginRight: 30 }}>
             <div
+              onMouseDown={() => {
+                window.scrollTo({ top: 0, behavior: 'smooth' })
+              }}
               style={{
+                cursor: 'pointer',
                 fontFamily: 'SFProBold',
                 ...styles.border,
-                // backgroundColor: COLORS.white,
                 color: COLORS.lightBlack,
                 borderRadius: 1000,
                 backgroundImage:
@@ -116,43 +128,68 @@ function Head() {
             </div>
           </div>
           <div style={{ ...styles.block }}>
-            <div style={{ ...styles.border, marginRight: 20 }}>
-              <img
-                src={bio}
+            <Button
+              onMouseDown={() => {
+                bioElement.scrollIntoView({
+                  behavior: 'smooth',
+                  // block: 'end',
+                  inline: 'end',
+                })
+              }}
+              text="Bio"
+              setHover={setBio}
+              hover={bio}
+            >
+              <Bio
                 style={{ height: 20, marginRight: 7.5 }}
-                alt="website logo"
+                fill={bio ? COLORS.lightBlack : COLORS.white}
               />
-              Bio
-            </div>
-            <div style={{ ...styles.border, marginRight: 20 }}>
-              <img
-                src={projets}
+            </Button>
+            <Button
+              onMouseDown={() => {
+                projectElement.scrollIntoView({
+                  behavior: 'smooth',
+                  // block: 'end',
+                  inline: 'end',
+                })
+              }}
+              text="Projets"
+              setHover={setProject}
+              hover={project}
+            >
+              <Projets
                 style={{ height: 20, marginRight: 7.5 }}
-                alt="website logo"
+                fill={project ? COLORS.lightBlack : COLORS.white}
               />
-              Projets
-            </div>
-            <div style={{ ...styles.border }}>
-              <img
-                src={contact}
+            </Button>
+            <Button
+              onMouseDown={() => {
+                contactElement.scrollIntoView({
+                  behavior: 'smooth',
+                  // block: 'end',
+                  inline: 'end',
+                })
+              }}
+              text="Contact"
+              setHover={setContact}
+              hover={contact}
+            >
+              <Contact
                 style={{ height: 20, marginRight: 7.5 }}
-                alt="website logo"
+                fill={contact ? COLORS.lightBlack : COLORS.white}
               />
-              Contact
-            </div>
+            </Button>
           </div>
         </div>
         <div
           style={{ ...styles.block, display: 'flex', alignSelf: 'flex-end' }}
         >
-          <div style={{ ...styles.border }}>
-            <img
-              src={rotate}
+          <Button text="fr/en" setHover={setRotate} hover={rotate}>
+            <Rotate
               style={{ height: 20, marginRight: 7.5 }}
-              alt="website logo"
+              fill={rotate ? COLORS.lightBlack : COLORS.white}
             />
-            fr/en
-          </div>
+          </Button>
         </div>
       </div>
 

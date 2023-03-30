@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable prefer-destructuring */
 /* eslint-disable no-param-reassign */
 /* eslint-disable react/prop-types */
@@ -137,14 +138,13 @@ function FirstYear({ firstRef, lastRef }) {
         style={{
           display: 'flex',
           justifyContent: 'center',
-          alignItems: 'center',
-          alignContent: 'center',
+          alignItems: 'flex-start',
         }}
       >
         <div
           style={{
             width: 2,
-            height: 1100,
+            height: 600,
             marginLeft: 100,
             marginRight: 100,
             backgroundColor: COLORS.white,
@@ -154,7 +154,7 @@ function FirstYear({ firstRef, lastRef }) {
       <div
         style={{
           flexDirection: 'column',
-          height: 1100,
+          height: 600,
         }}
       >
         <div
@@ -235,9 +235,7 @@ function FirstYear({ firstRef, lastRef }) {
                 <div>Langage · C</div>
               </div>
               <div style={{ color: COLORS.grey, paddingTop: 10 }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Purus viverra accumsan in nisl nisi scelerisque eu ultrices.{' '}
+                Extension des compétences vues en C# à Rubika.
               </div>
             </div>
             <div
@@ -258,12 +256,10 @@ function FirstYear({ firstRef, lastRef }) {
                 <div>Langage · PHP</div>
               </div>
               <div style={{ color: COLORS.grey, paddingTop: 10 }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Purus viverra accumsan in nisl nisi scelerisque eu ultrices.{' '}
+                Communication avec des bases de données SQL.
               </div>
             </div>
-            <div
+            {/* <div
               ref={(el) => {
                 firstYearRef.current[3] = el
               }}
@@ -281,9 +277,7 @@ function FirstYear({ firstRef, lastRef }) {
                 <div>Langage · HTML</div>
               </div>
               <div style={{ color: COLORS.grey, paddingTop: 10 }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Purus viverra accumsan in nisl nisi scelerisque eu ultrices.{' '}
+                Langage de balisage conçu pour représenter les pages web.
               </div>
             </div>
             <div
@@ -304,11 +298,9 @@ function FirstYear({ firstRef, lastRef }) {
                 <div>Langage · CSS</div>
               </div>
               <div style={{ color: COLORS.grey, paddingTop: 10 }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Purus viverra accumsan in nisl nisi scelerisque eu ultrices.{' '}
+                Modification de l'apparence des pages web.
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         <div
@@ -332,10 +324,10 @@ function FirstYear({ firstRef, lastRef }) {
           <div style={{ ...styles.stepText }}>
             <div
               ref={(el) => {
-                firstYearRef.current[5] = el
+                firstYearRef.current[3] = el
               }}
-              id={15}
-              className={15}
+              id={13}
+              className={13}
             >
               <div
                 style={{
@@ -347,19 +339,16 @@ function FirstYear({ firstRef, lastRef }) {
                 <div>Mathématiques</div>
               </div>
               <div style={{ color: COLORS.grey, paddingTop: 10 }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Purus viverra accumsan in nisl nisi scelerisque eu ultrices.{' '}
+                Travail sur des mathématiques analytiques et arithmétique.
               </div>
             </div>
-            <div ref={lastRef} id={16} className={16}>
+            <div ref={lastRef} id={14} className={14}>
               <div style={styles.stepTitle}>
                 <div>Physique</div>
               </div>
               <div style={{ color: COLORS.grey, paddingTop: 10 }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Purus viverra accumsan in nisl nisi scelerisque eu ultrices.{' '}
+                Travail sur de la thermodynamique, de l'optique et de
+                l'électronique.
               </div>
             </div>
           </div>

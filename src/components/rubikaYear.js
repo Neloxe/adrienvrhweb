@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable prefer-destructuring */
 /* eslint-disable no-param-reassign */
 /* eslint-disable react/prop-types */
@@ -57,7 +58,7 @@ const styles = {
     fontSize: SIZE.m * 0.9,
     display: 'flex',
     flexDirection: 'column',
-    transform: 'translate(0, 15px)',
+    transform: 'translate(0, -5px)',
     marginLeft: 25,
     width: 450,
   },
@@ -135,10 +136,12 @@ function RubYear() {
         <div
           style={{
             width: 2,
-            height: 600,
+            height: 400,
             marginLeft: 100,
             marginRight: 100,
-            backgroundColor: COLORS.white,
+            background:
+              'linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.7329525560224089) 24%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%)',
+            // backgroundColor: COLORS.white,
           }}
         />
       </div>
@@ -173,11 +176,35 @@ function RubYear() {
               id={30}
               className={30}
             >
+              <div style={{ ...styles.stepTitle }}>
+                <img
+                  style={{
+                    width: 20,
+                    marginRight: 5,
+                  }}
+                  src={unity}
+                />
+                <div>Logiciel · Unity</div>
+              </div>
+              <div style={{ color: COLORS.grey, paddingTop: 10 }}>
+                Unity est un moteur de jeu multiplateforme développé par Unity
+                Technologies. Il est l'un des plus répandus dans l'industrie du
+                jeu vidéo.
+              </div>
+            </div>
+            <div
+              ref={(el) => {
+                firstYearRef.current[1] = el
+              }}
+              id={31}
+              className={31}
+            >
               <div
                 style={{
                   display: 'flex',
                   flexDirection: 'row',
                   alignItems: 'center',
+                  paddingTop: 10,
                 }}
               >
                 <img
@@ -190,32 +217,7 @@ function RubYear() {
                 <div>Langage · C#</div>
               </div>
               <div style={{ color: COLORS.grey, paddingTop: 10 }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Purus viverra accumsan in nisl nisi scelerisque eu ultrices.{' '}
-              </div>
-            </div>
-            <div
-              ref={(el) => {
-                firstYearRef.current[1] = el
-              }}
-              id={31}
-              className={31}
-            >
-              <div style={styles.stepTitle}>
-                <img
-                  style={{
-                    width: 20,
-                    marginRight: 5,
-                  }}
-                  src={unity}
-                />
-                <div>Logiciel · Unity</div>
-              </div>
-              <div style={{ color: COLORS.grey, paddingTop: 10 }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Purus viverra accumsan in nisl nisi scelerisque eu ultrices.{' '}
+                Langage indisociable de Unity.
               </div>
             </div>
             <div
@@ -236,9 +238,8 @@ function RubYear() {
                 <div>Outils · Photon</div>
               </div>
               <div style={{ color: COLORS.grey, paddingTop: 10 }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Purus viverra accumsan in nisl nisi scelerisque eu ultrices.{' '}
+                Photon est le service multijoueur multiplateforme standard et le
+                premier service multijoueur mondial pour les jeux Unity.
               </div>
             </div>
             <div

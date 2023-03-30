@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable no-unused-vars */
@@ -108,14 +109,6 @@ function InternShip({ lastRef }) {
       })
       observer.observe(firstYearRef.current[i - 20])
     }
-    // anime({
-    //   targets: lastRef.current,
-    //   translateX: [0, -20],
-    //   opacity: [1, 0],
-    //   duration: 500,
-    //   easing: 'easeInOutExpo',
-    // })
-    // observer.observe(lastRef.current)
   }, [])
 
   return (
@@ -137,7 +130,7 @@ function InternShip({ lastRef }) {
         <div
           style={{
             width: 2,
-            height: 400,
+            height: 300,
             marginLeft: 100,
             marginRight: 100,
             backgroundColor: COLORS.white,
@@ -192,9 +185,7 @@ function InternShip({ lastRef }) {
                 <div>Langage · JavaScript</div>
               </div>
               <div style={{ color: COLORS.grey, paddingTop: 10 }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Purus viverra accumsan in nisl nisi scelerisque eu ultrices.{' '}
+                Langage de base pour l'utilisation de React.
               </div>
             </div>
             <div
@@ -215,9 +206,7 @@ function InternShip({ lastRef }) {
                 <div>Framework · React</div>
               </div>
               <div style={{ color: COLORS.grey, paddingTop: 10 }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Purus viverra accumsan in nisl nisi scelerisque eu ultrices.{' '}
+                Framework de dévelopement de site web interactif et optimisé.
               </div>
             </div>
             <div
@@ -238,9 +227,7 @@ function InternShip({ lastRef }) {
                 <div>Outils · Firebase</div>
               </div>
               <div style={{ color: COLORS.grey, paddingTop: 10 }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Purus viverra accumsan in nisl nisi scelerisque eu ultrices.{' '}
+                Utilisation du stockage et de l'analytics de firebase.
               </div>
             </div>
             <div

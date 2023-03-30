@@ -44,6 +44,7 @@ function Tree() {
 
   function InterObs(animTarget, refToListen) {
     const Observer = new IntersectionObserver((entries) => {
+      console.log(entries.length)
       for (const entry of entries) {
         if (entry.isIntersecting) {
           anime({
@@ -123,7 +124,7 @@ function Tree() {
     bigStep: {
       backgroundColor: COLORS.white,
       width: 750,
-      height: 220,
+      height: 190,
       borderRadius: '35px',
     },
   }
@@ -140,7 +141,7 @@ function Tree() {
         alignContent: 'center',
       }}
     >
-      <Mouse target={bcdRef} ref={mouseRef} />
+      {/* <Mouse target={bcdRef} ref={mouseRef} /> */}
 
       <div
         style={{
@@ -152,41 +153,91 @@ function Tree() {
       >
         <div
           style={{
-            ...styles.pdpZone,
+            height: '100vh',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignContent: 'center',
+            alignItems: 'center',
           }}
         >
-          <img src={pdp} style={styles.pdp} />
+          <div
+            style={{
+              fontFamily: 'SFProBold',
+              fontSize: SIZE.xl * 1.5,
+              lineHeight: 0.975,
+              justifyContent: 'center',
+              width: 775,
+              textAlign: 'center',
+            }}
+          >
+            {/* Student at ISEN, graduate school of science and engineering. I’m
+            looking for a work study program in IT for my two last year of
+            engineering school. */}
+            Etudiant à l'ISEN, école supérieure des sciences et d'ingénierie. Je
+            suis à la recherche d'une alternance en informatique pour mes deux
+            dernières années d'école d'ingénieur.
+          </div>
+          <img
+            src={pdp}
+            style={{
+              width: 175,
+              borderRadius: 100,
+              boxShadow: 'inset 0px 0px 15px #000000',
+              margin: 60,
+            }}
+          />
+          <div
+            style={{
+              fontFamily: 'SFProMedium',
+              fontSize: SIZE.m,
+              lineHeight: 0.9,
+              justifyContent: 'center',
+              color: COLORS.grey,
+              width: 550,
+            }}
+          >
+            {/* I have been programming for 5 years now and I'm working on a mobile
+            app project alongside my studies. <br />
+            <br />I have already worked in many team projects, notably at RUBIKA
+            as a lead developer. */}
+            Je programme depuis 5 ans maintenant et je travaille sur un projet
+            d'application mobile parallèlement à mes études. <br /> <br />
+            J'ai déjà travaillé sur de nombreux projets d'équipe, notamment chez
+            RUBIKA en tant que lead developer.
+          </div>
+        </div>
+        <div
+          style={{
+            width: '75%',
+            display: 'flex',
+            flexDirection: 'row',
+          }}
+        >
           <div
             style={{
               display: 'flex',
-              flexDirection: 'column',
-              width: 450,
+              justifyContent: 'center',
+              alignItems: 'center',
+              alignContent: 'center',
             }}
           >
             <div
               style={{
-                fontFamily: 'SFProMedium',
-                fontSize: SIZE.xl * 2.5,
-                lineHeight: 0.9,
-                paddingBottom: 20,
+                width: 2,
+                height: 200,
+                marginLeft: 100,
+                marginRight: 100,
+                background:
+                  'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 45.65%)', // backgroundColor: COLORS.white,
               }}
-            >
-              Plus qu'un <br />
-              étudiant.
-            </div>
-            <div
-              style={{
-                fontFamily: 'SFProMedium',
-                color: COLORS.grey,
-                fontSize: SIZE.xl,
-                lineHeight: 0.9,
-                width: 370,
-              }}
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore.
-            </div>
+            />
           </div>
+          <div
+            style={{
+              flexDirection: 'column',
+            }}
+          />
         </div>
         <div style={styles.bigStep}>
           <div
@@ -235,11 +286,11 @@ function Tree() {
                   </div>
                 </div>
                 <div style={{ fontFamily: 'SFProBold', color: COLORS.grey }}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua,
-                  consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                  ut labore et dolore magna aliqua. Purus viverra accumsan in
-                  nisl nisi scelerisque eu ultrices.
+                  JUNIA est l'école des transitions qui contribue aux grands
+                  enjeux : nourrir la planète, développer la transformation
+                  numérique et industrielle, accélérer la transition énergétique
+                  et urbaine, renforcer les technologies de la santé et du
+                  bien-vivre.
                 </div>
               </div>
             </div>
@@ -249,7 +300,7 @@ function Tree() {
                 backgroundImage:
                   'linear-gradient(336deg, rgba(147,245,236,1) 0%, rgba(167,123,243,1) 100%)',
                 width: '200px',
-                height: '200px',
+                height: '170px',
                 display: 'flex',
                 alignItems: 'center',
                 alignContent: 'center',
@@ -280,7 +331,7 @@ function Tree() {
                 backgroundImage:
                   'linear-gradient(336deg, rgba(147,245,236,1) 0%, rgba(167,123,243,1) 100%)',
                 minWidth: '200px',
-                minHeight: '200px',
+                minHeight: '170px',
                 display: 'flex',
                 alignItems: 'center',
                 alignContent: 'center',
@@ -330,11 +381,11 @@ function Tree() {
                   </div>
                 </div>
                 <div style={{ fontFamily: 'SFProBold', color: COLORS.grey }}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua,
-                  consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                  ut labore et dolore magna aliqua. Purus viverra accumsan in
-                  nisl nisi scelerisque eu ultrices.
+                  BetterCallDave est une jeune entreprise reconnue dans le
+                  domaine des logiciels intégrant de la musique, ils conçoivent
+                  des interfaces connectées pensées pour l’utilisateur. Durant
+                  ce stage très formateur, j'ai appris à utiliser de nombreuses
+                  nouvelles technologies et de nombreux supports.
                 </div>
               </div>
             </div>
@@ -389,11 +440,11 @@ function Tree() {
                   </div>
                 </div>
                 <div style={{ fontFamily: 'SFProBold', color: COLORS.grey }}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua,
-                  consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                  ut labore et dolore magna aliqua. Purus viverra accumsan in
-                  nisl nisi scelerisque eu ultrices.
+                  RUBIKA est née du regroupement de trois écoles pionnières de
+                  la création numérique : l’Institut Supérieur de Design,
+                  Supinfocom et Supinfogame. Ces écoles se sont distinguées par
+                  la mise en place d’une pédagogie au plus proche des besoins
+                  des entreprises.
                 </div>
               </div>
             </div>
@@ -403,7 +454,7 @@ function Tree() {
                 backgroundImage:
                   'linear-gradient(336deg, rgba(147,245,236,1) 0%, rgba(167,123,243,1) 100%)',
                 width: '200px',
-                height: '200px',
+                height: '170px',
                 display: 'flex',
                 alignItems: 'center',
                 alignContent: 'center',
