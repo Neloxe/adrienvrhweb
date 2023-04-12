@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/adrienvrhweb/static/css/main.ace4ab7c.css",
-    "main.js": "/adrienvrhweb/static/js/main.ffafac8a.js",
+    "main.js": "/adrienvrhweb/static/js/main.e72d750e.js",
     "static/js/787.4d8cfef2.chunk.js": "/adrienvrhweb/static/js/787.4d8cfef2.chunk.js",
     "static/media/PHONE.svg": "/adrienvrhweb/static/media/PHONE.40593750759035814d7cf9e429148ea1.svg",
     "static/media/SFPRODISPLAYMEDIUM.OTF": "/adrienvrhweb/static/media/SFPRODISPLAYMEDIUM.b85d841dacb040b84951.OTF",
@@ -40,11 +40,11 @@
     "static/media/QUOTE.svg": "/adrienvrhweb/static/media/QUOTE.c08e6726e7bf008fe4468e8a27254a91.svg",
     "static/media/COMMIT.svg": "/adrienvrhweb/static/media/COMMIT.694fb3c96c220e0492f068ef9aac35e3.svg",
     "main.ace4ab7c.css.map": "/adrienvrhweb/static/css/main.ace4ab7c.css.map",
-    "main.ffafac8a.js.map": "/adrienvrhweb/static/js/main.ffafac8a.js.map",
+    "main.e72d750e.js.map": "/adrienvrhweb/static/js/main.e72d750e.js.map",
     "787.4d8cfef2.chunk.js.map": "/adrienvrhweb/static/js/787.4d8cfef2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ace4ab7c.css",
-    "static/js/main.ffafac8a.js"
+    "static/js/main.e72d750e.js"
   ]
 }
