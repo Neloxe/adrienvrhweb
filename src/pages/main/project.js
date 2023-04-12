@@ -105,7 +105,7 @@ function Project() {
           style={{
             width: '50%',
             height: 400,
-            fontSize: (SIZE.xl * 2.4 * window.innerWidth) / 1440,
+            fontSize: (SIZE.xl * 2 * window.innerWidth) / 1440,
             fontFamily: 'SFProBold',
             fontWeight: 'bold',
             margin: 30,
@@ -141,7 +141,7 @@ function Project() {
               }}
             >
               Créer & partager des moments avec vos amis sur le réseau
-              événementiel.Plus qu’un étudiant.
+              événementiel.
             </div>
             <div
               style={{

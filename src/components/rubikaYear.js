@@ -137,7 +137,7 @@ function RubYear() {
           style={{
             width: 2,
             height: 400,
-            marginLeft: 100,
+            marginLeft: '10vw',
             marginRight: 100,
             background:
               'linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.7329525560224089) 24%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%)',

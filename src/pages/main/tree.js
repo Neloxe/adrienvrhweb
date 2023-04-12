@@ -226,7 +226,7 @@ function Tree() {
               style={{
                 width: 2,
                 height: 200,
-                marginLeft: 100,
+                marginLeft: '10vw',
                 marginRight: 100,
                 background:
                   'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 45.65%)', // backgroundColor: COLORS.white,

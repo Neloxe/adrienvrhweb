@@ -131,7 +131,7 @@ function InternShip({ lastRef }) {
           style={{
             width: 2,
             height: 300,
-            marginLeft: 100,
+            marginLeft: '10vw',
             marginRight: 100,
             backgroundColor: COLORS.white,
           }}

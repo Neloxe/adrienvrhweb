@@ -145,7 +145,7 @@ function FirstYear({ firstRef, lastRef }) {
           style={{
             width: 2,
             height: 600,
-            marginLeft: 100,
+            marginLeft: '10vw',
             marginRight: 100,
             backgroundColor: COLORS.white,
           }}

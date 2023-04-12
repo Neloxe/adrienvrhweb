@@ -100,7 +100,7 @@ function Home() {
         width: '100%',
         backgroundColor: COLORS.lightBlack,
         display: 'flex',
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         alignItems: 'center',
         alignContent: 'center',
       }}
@@ -108,7 +108,8 @@ function Home() {
       <div
         style={{
           display: 'flex',
-          alignSelf: 'center',
+          // alignSelf: 'center',
+          justifyContent: 'flex-start',
           fontFamily: 'JetBrainsMono',
           flexDirection: 'column',
         }}
@@ -120,10 +121,11 @@ function Home() {
             lineHeight: 0.85,
             letterSpacing: '-15px',
             fontSize: 200,
+            width: 1400,
             zIndex: 1,
           }}
         >
-          Student <br style={{ backgroundColor: COLORS.grey }} /> Developer
+          Student <br /> Developer
         </div>
         <div
           className="bar"
@@ -155,7 +157,7 @@ function Home() {
       </div>
       <div
         className="mouse"
-        style={{ position: 'absolute', bottom: 10, opacity: 0 }}
+        style={{ position: 'absolute', bottom: 10, opacity: 0, left: '50%' }}
       >
         <Lottie style={{ width: 60 }} animationData={mouse} />
       </div>
