@@ -46,7 +46,7 @@ function Chapter({ children, text, id }) {
       <div
         style={{
           width: '100%',
-          height: 100,
+          height: 175,
           zIndex: 99,
           backgroundColor: COLORS.lightBlack,
           display: 'flex',
@@ -68,8 +68,9 @@ function Chapter({ children, text, id }) {
           <div
             ref={chapterRef}
             style={{
-              paddingTop: 5,
+              paddingTop: 10,
               fontFamily: 'SFProBold',
+              fontSize: 17.5,
               textAlign: 'center',
             }}
           >

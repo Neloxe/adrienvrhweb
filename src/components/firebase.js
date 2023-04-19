@@ -4,7 +4,6 @@
 /* eslint-disable no-restricted-syntax */
 import React, { useEffect, useRef } from 'react'
 import anime from 'animejs/lib/anime.es.js'
-import { Lottie } from 'lottie-react'
 import { COLORS } from '../export/style'
 import firebase from '../lottie/FIREBASE.json'
 

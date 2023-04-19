@@ -18,6 +18,12 @@ import Firebase from '../../components/firebase'
 import store from '../../image/STORE.png'
 import Chapter from '../../components/chapter'
 import { ReactComponent as Iphone } from '../../svg/IPHONE.svg'
+import main from '../../image/MAIN.png'
+import event from '../../image/EVENT.png'
+import profil from '../../image/PROFIL.png'
+import step1 from '../../image/STEP1.png'
+import step2 from '../../image/STEP2.png'
+import step3 from '../../image/STEP3.png'
 
 function Project() {
   const styles = {
@@ -62,6 +68,116 @@ function Project() {
 
   return (
     <div>
+      {' '}
+      <div
+        style={{
+          height: '100vh',
+          width: '100%',
+          backgroundColor: COLORS.lightBlack,
+          justifyContent: 'center',
+          alignItems: 'center',
+          alignContent: 'center',
+          display: 'flex',
+          flexDirection: 'row',
+        }}
+      >
+        <div
+          style={{
+            width: '42.5vh',
+            display: 'flex',
+            justifyContent: 'flex-end',
+            alignItems: 'center',
+            alignContent: 'center',
+          }}
+        >
+          <img src={main} style={styles.phone} alt="website logo" />
+        </div>
+        <div
+          style={{
+            width: 350,
+            height: '75vh',
+            paddingLeft: 40,
+            fontSize: SIZE.xl * 2.4,
+            fontFamily: 'SFProBold',
+            fontWeight: 'bold',
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'flex-start',
+          }}
+        >
+          <div
+            style={{
+              display: 'flex',
+              alignContent: 'flex-start',
+            }}
+          >
+            {/* <Quote
+              style={{
+                paddingTop: 10,
+                paddingRight: 10,
+                width: 35,
+                height: 35,
+                fill: '#93F5EC',
+              }}
+            /> */}
+          </div>
+
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'center',
+              }}
+            >
+              <div
+                style={
+                  {
+                    // background:
+                    //   'linear-gradient(to bottom right, #93F5EC 20%, #A77BF3 84%)',
+                    // '-webkit-background-clip': 'text',
+                    // '-webkit-text-fill-color': 'transparent',
+                  }
+                }
+              >
+                Frame It
+              </div>
+              <div
+                style={{
+                  borderRadius: 5,
+                  background:
+                    'linear-gradient(to bottom right, #93F5EC 20%, #A77BF3 84%)',
+                  fontSize: SIZE.s,
+                  color: COLORS.lightBlack,
+                  padding: 5,
+                  // marginTop: 15,
+                  marginLeft: 15,
+                }}
+              >
+                BETA
+              </div>
+            </div>
+            <div
+              style={{
+                fontSize: SIZE.m,
+                color: COLORS.grey,
+                paddingTop: 10,
+                width: 350,
+              }}
+            >
+              Frame It est un réseau social pour partager des photos avec vos
+              amis. Vous pouvez créer ou rejoindre des événements, vous avez
+              désormé un accès rapide et facile à l'ensemble de vos photos et de
+              plus entièrement trié par l'application.
+            </div>
+            <img
+              src={store}
+              style={{ width: 350, paddingTop: 30 }}
+              alt="website logo"
+            />
+          </div>
+        </div>
+      </div>
       <div
         style={{
           height: '100vh',
@@ -155,118 +271,9 @@ function Project() {
           </div>
         </div>
       </div>
-      <div
-        style={{
-          height: '100vh',
-          width: '100%',
-          backgroundColor: COLORS.lightBlack,
-          justifyContent: 'center',
-          alignItems: 'center',
-          alignContent: 'center',
-          display: 'flex',
-          flexDirection: 'row',
-        }}
-      >
-        <div
-          style={{
-            width: '42.5vh',
-            display: 'flex',
-            justifyContent: 'flex-end',
-            alignItems: 'center',
-            alignContent: 'center',
-          }}
-        >
-          <img src={phone} style={styles.phone} alt="website logo" />
-        </div>
-        <div
-          style={{
-            width: 350,
-            height: '75vh',
-            paddingLeft: 40,
-            fontSize: SIZE.xl * 2.4,
-            fontFamily: 'SFProBold',
-            fontWeight: 'bold',
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'flex-start',
-          }}
-        >
-          <div
-            style={{
-              display: 'flex',
-              alignContent: 'flex-start',
-            }}
-          >
-            {/* <Quote
-              style={{
-                paddingTop: 10,
-                paddingRight: 10,
-                width: 35,
-                height: 35,
-                fill: '#93F5EC',
-              }}
-            /> */}
-          </div>
-
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <div
-              style={{
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center',
-              }}
-            >
-              <div
-                style={
-                  {
-                    // background:
-                    //   'linear-gradient(to bottom right, #93F5EC 20%, #A77BF3 84%)',
-                    // '-webkit-background-clip': 'text',
-                    // '-webkit-text-fill-color': 'transparent',
-                  }
-                }
-              >
-                Frame It
-              </div>
-              <div
-                style={{
-                  borderRadius: 5,
-                  background:
-                    'linear-gradient(to bottom right, #93F5EC 20%, #A77BF3 84%)',
-                  fontSize: SIZE.s,
-                  color: COLORS.lightBlack,
-                  padding: 5,
-                  // marginTop: 15,
-                  marginLeft: 15,
-                }}
-              >
-                BETA
-              </div>
-            </div>
-            <div
-              style={{
-                fontSize: SIZE.m,
-                color: COLORS.grey,
-                paddingTop: 10,
-                width: 350,
-              }}
-            >
-              Frame It est un réseau social pour partager des photos avec vos
-              amis. Vous pouvez créer ou rejoindre des événements, vous avez
-              désormé un accès rapide et facile à l'ensemble de vos photos et de
-              plus entièrement trié par l'application.
-            </div>
-            <img
-              src={store}
-              style={{ width: 350, paddingTop: 30 }}
-              alt="website logo"
-            />
-          </div>
-        </div>
-      </div>
       <Chapter text="Captures">
         <Iphone
-          style={{ height: 20, paddingLeft: 7.5, paddingRight: 7.5 }}
+          style={{ height: 35, width: 35, paddingLeft: 7.5, paddingRight: 7.5 }}
           fill={COLORS.white}
         />
       </Chapter>
@@ -326,8 +333,8 @@ function Project() {
               </div>
             </div>
           </div>
-          <img src={phone} style={styles.phone} alt="website logo" />
-          <img src={phone} style={styles.phone} alt="website logo" />
+          <img src={event} style={styles.phone} alt="website logo" />
+          <img src={profil} style={styles.phone} alt="website logo" />
           <div
             style={{
               height: '80vh',
@@ -369,6 +376,22 @@ function Project() {
           }}
           ref={targetRef}
         />
+      </div>
+      <div
+        style={{
+          height: '100vh',
+          width: '100%',
+          backgroundColor: COLORS.lightBlack,
+          justifyContent: 'center',
+          alignItems: 'center',
+          alignContent: 'center',
+          display: 'flex',
+          flexDirection: 'row',
+        }}
+      >
+        <img src={step1} style={styles.phone} alt="website logo" />
+        <img src={step2} style={styles.phone} alt="website logo" />
+        <img src={step3} style={styles.phone} alt="website logo" />
       </div>
     </div>
   )

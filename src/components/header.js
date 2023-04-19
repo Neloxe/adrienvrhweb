@@ -4,12 +4,14 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { useEffect, useState } from 'react'
 import anime from 'animejs/lib/anime.es.js'
+import { useNavigation } from 'react-router-dom'
 import { COLORS } from '../export/style'
 import Button from './button'
 import { ReactComponent as Projets } from '../svg/PROJETS.svg'
 import { ReactComponent as Contact } from '../svg/CONTACT.svg'
 import { ReactComponent as Bio } from '../svg/BIO.svg'
 import { ReactComponent as Rotate } from '../svg/ROTATE.svg'
+import { ReactComponent as Student } from '../svg/STUDENT2.svg'
 
 const styles = {
   header: {
@@ -52,11 +54,15 @@ function Head() {
   const [project, setProject] = useState(false)
   const [contact, setContact] = useState(false)
   const [bio, setBio] = useState(false)
+  const [cursus, setCursus] = useState(false)
+
   const [rotate, setRotate] = useState(false)
 
   const projectElement = document.getElementById('project')
   const bioElement = document.getElementById('bio')
   const contactElement = document.getElementById('contact')
+  const cursusElement = document.getElementById('cursus')
+  const navigate = useNavigation()
 
   useEffect(() => {
     anime.timeline({ loop: false }).add({
@@ -111,7 +117,8 @@ function Head() {
           <div style={{ ...styles.block, marginRight: 30 }}>
             <div
               onMouseDown={() => {
-                window.scrollTo({ top: 0, behavior: 'smooth' })
+                // window.scrollTo({ top: 0, behavior: 'smooth' })
+                navigate('/frame-cgu')
               }}
               style={{
                 cursor: 'pointer',
@@ -177,6 +184,23 @@ function Head() {
               <Contact
                 style={{ height: 20, marginRight: 7.5 }}
                 fill={contact ? COLORS.lightBlack : COLORS.white}
+              />
+            </Button>
+            <Button
+              onMouseDown={() => {
+                cursusElement.scrollIntoView({
+                  behavior: 'smooth',
+                  // block: 'end',
+                  inline: 'end',
+                })
+              }}
+              text="Cursus"
+              setHover={setCursus}
+              hover={cursus}
+            >
+              <Student
+                style={{ height: 20, marginRight: 7.5 }}
+                fill={cursus ? COLORS.lightBlack : COLORS.white}
               />
             </Button>
           </div>

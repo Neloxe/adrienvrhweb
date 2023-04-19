@@ -77,7 +77,7 @@ function Error() {
             alt="website logo"
           />
           <img
-            src={circle2}
+            src={circle}
             className="circle2"
             style={{
               height: '50vh',

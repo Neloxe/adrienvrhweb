@@ -77,7 +77,7 @@ function Contact() {
             alt="website logo"
           />
           <img
-            src={circle2}
+            src={circle}
             className="circle2"
             style={{
               height: '69vh',
@@ -110,7 +110,14 @@ function Contact() {
               }}
             >
               <div style={{ display: 'flex', flexDirection: 'row' }}>
-                <Button invert setHover={setDiscord} hover={discord}>
+                <Button
+                  invert
+                  onMouseDown={() => {
+                    window.open('')
+                  }}
+                  setHover={setDiscord}
+                  hover={discord}
+                >
                   <Icon
                     style={{ height: 20, paddingLeft: 7.5, paddingRight: 7.5 }}
                     fill={discord ? COLORS.white : COLORS.lightBlack}
@@ -135,9 +142,12 @@ function Contact() {
                 fontSize: SIZE.m,
                 fontFamily: 'SFProMedium',
                 paddingTop: 40,
+                textAlign: 'center',
               }}
             >
-              adrienverhaeghe@protonmail.com
+              adrienvrh@proton.me
+              <br />
+              +33651929058
             </div>
             <div
               style={{

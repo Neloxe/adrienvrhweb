@@ -15,11 +15,17 @@ function Home() {
   let scroll = false
 
   useEffect(() => {
+    document.getElementById('text').style.opacity = 0
+    document.getElementById('op').style.opacity = 0
     let element = document.getElementsByClassName('text-animation')[0]
     element.innerHTML = element.textContent.replace(
       /\S/g,
       '<span class="letter">$&</span>'
     )
+
+    document.getElementById('text').style.opacity = 1
+    document.getElementById('op').style.opacity = 1
+
     anime.timeline({ loop: false }).add({
       targets: '.text-animation .letter',
       scale: [3, 1],
@@ -104,6 +110,7 @@ function Home() {
         alignItems: 'center',
         alignContent: 'center',
       }}
+      id="op"
     >
       <div
         style={{
@@ -116,6 +123,7 @@ function Home() {
       >
         <div
           className="text-animation"
+          id="text"
           style={{
             paddingLeft: 30,
             lineHeight: 0.85,

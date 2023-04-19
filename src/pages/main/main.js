@@ -11,9 +11,11 @@ import Project from './project'
 import phone from '../../lottie/PHONE.json'
 import Contact from './contact'
 
-import { ReactComponent as Bio } from '../../svg/BIO.svg'
+import { ReactComponent as Student } from '../../svg/STUDENT2.svg'
+import { ReactComponent as BioIcon } from '../../svg/BIO.svg'
 import { ReactComponent as Projets } from '../../svg/PROJETS.svg'
 import { ReactComponent as ContactIcon } from '../../svg/CONTACT.svg'
+import Bio from './bio'
 
 const styles = {
   app: {
@@ -37,26 +39,53 @@ function Main() {
           <Head />
           <Home />
           <Chapter id="bio" text="Bio">
-            <Bio
-              style={{ height: 20, paddingLeft: 7.5, paddingRight: 7.5 }}
+            <BioIcon
+              style={{
+                height: 35,
+                width: 35,
+                paddingLeft: 7.5,
+                paddingRight: 7.5,
+              }}
               fill={COLORS.white}
             />
           </Chapter>
-          <Tree />
-          <Chapter id="project" text="Application · Frame It">
+          <Bio />
+          <Chapter id="project" text="Mes projets">
             <Projets
-              style={{ height: 20, paddingLeft: 7.5, paddingRight: 7.5 }}
+              style={{
+                height: 35,
+                width: 35,
+                paddingLeft: 7.5,
+                paddingRight: 7.5,
+              }}
               fill={COLORS.white}
             />
           </Chapter>
           <Project />
           <Chapter id="contact" text="Contact">
             <ContactIcon
-              style={{ height: 20, paddingLeft: 7.5, paddingRight: 7.5 }}
+              style={{
+                height: 35,
+                width: 35,
+                paddingLeft: 7.5,
+                paddingRight: 7.5,
+              }}
               fill={COLORS.white}
             />
           </Chapter>
           <Contact />
+          <Chapter id="cursus" text="Cursus">
+            <Student
+              style={{
+                height: 35,
+                width: 35,
+                paddingLeft: 7.5,
+                paddingRight: 7.5,
+              }}
+              fill={COLORS.white}
+            />
+          </Chapter>
+          <Tree />
         </div>
       ) : (
         <div

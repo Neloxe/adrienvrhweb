@@ -151,7 +151,7 @@ function Tree() {
           alignItems: 'center',
         }}
       >
-        <div
+        {/* <div
           style={{
             height: '100vh',
             display: 'flex',
@@ -171,9 +171,9 @@ function Tree() {
               textAlign: 'center',
             }}
           >
-            {/* Student at ISEN, graduate school of science and engineering. I’m
+            Student at ISEN, graduate school of science and engineering. I’m
             looking for a work study program in IT for my two last year of
-            engineering school. */}
+            engineering school.
             Etudiant à l'ISEN, école supérieure des sciences et d'ingénierie. Je
             suis à la recherche d'une alternance en informatique pour mes deux
             dernières années d'école d'ingénieur.
@@ -197,16 +197,16 @@ function Tree() {
               width: 550,
             }}
           >
-            {/* I have been programming for 5 years now and I'm working on a mobile
+            I have been programming for 5 years now and I'm working on a mobile
             app project alongside my studies. <br />
             <br />I have already worked in many team projects, notably at RUBIKA
-            as a lead developer. */}
+            as a lead developer.
             Je programme depuis 5 ans maintenant et je travaille sur un projet
             d'application mobile parallèlement à mes études. <br /> <br />
             J'ai déjà travaillé sur de nombreux projets d'équipe, notamment chez
             RUBIKA en tant que lead developer.
           </div>
-        </div>
+        </div> */}
         <div
           style={{
             width: '75%',
