@@ -5,7 +5,7 @@
 import { useEffect, useState } from 'react'
 import anime from 'animejs/lib/anime.es.js'
 import { useNavigation } from 'react-router-dom'
-import { COLORS } from '../export/style'
+import { COLORS, phone } from '../export/style'
 import Button from './button'
 import { ReactComponent as Projets } from '../svg/PROJETS.svg'
 import { ReactComponent as Contact } from '../svg/CONTACT.svg'
@@ -100,7 +100,6 @@ function Head() {
 
   return (
     <div
-      className="header"
       style={{
         ...styles.header,
       }}
@@ -113,12 +112,18 @@ function Head() {
           justifyContent: 'space-between',
         }}
       >
-        <div style={{ display: 'flex', flexDirection: 'row' }}>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            width: '100vw',
+            justifyContent: phone ? 'space-between' : 'flex-start',
+          }}
+        >
           <div style={{ ...styles.block, marginRight: 30 }}>
             <div
               onMouseDown={() => {
-                // window.scrollTo({ top: 0, behavior: 'smooth' })
-                navigate('/frame-cgu')
+                window.scrollTo({ top: 0, behavior: 'smooth' })
               }}
               style={{
                 cursor: 'pointer',
@@ -134,7 +139,7 @@ function Head() {
               <div>AV</div>
             </div>
           </div>
-          <div style={{ ...styles.block }}>
+          <div className="header" style={{ ...styles.block }}>
             <Button
               onMouseDown={() => {
                 bioElement.scrollIntoView({
@@ -148,7 +153,10 @@ function Head() {
               hover={bio}
             >
               <Bio
-                style={{ height: 20, marginRight: 7.5 }}
+                style={{
+                  height: 20,
+                  marginRight: phone ? 0 : 7.5,
+                }}
                 fill={bio ? COLORS.lightBlack : COLORS.white}
               />
             </Button>
@@ -165,7 +173,7 @@ function Head() {
               hover={project}
             >
               <Projets
-                style={{ height: 20, marginRight: 7.5 }}
+                style={{ height: 20, marginRight: phone ? 0 : 7.5 }}
                 fill={project ? COLORS.lightBlack : COLORS.white}
               />
             </Button>
@@ -182,30 +190,32 @@ function Head() {
               hover={contact}
             >
               <Contact
-                style={{ height: 20, marginRight: 7.5 }}
+                style={{ height: 20, marginRight: phone ? 0 : 7.5 }}
                 fill={contact ? COLORS.lightBlack : COLORS.white}
               />
             </Button>
-            <Button
-              onMouseDown={() => {
-                cursusElement.scrollIntoView({
-                  behavior: 'smooth',
-                  // block: 'end',
-                  inline: 'end',
-                })
-              }}
-              text="Cursus"
-              setHover={setCursus}
-              hover={cursus}
-            >
-              <Student
-                style={{ height: 20, marginRight: 7.5 }}
-                fill={cursus ? COLORS.lightBlack : COLORS.white}
-              />
-            </Button>
+            {!phone && (
+              <Button
+                onMouseDown={() => {
+                  cursusElement.scrollIntoView({
+                    behavior: 'smooth',
+                    // block: 'end',
+                    inline: 'end',
+                  })
+                }}
+                text="Cursus"
+                setHover={setCursus}
+                hover={cursus}
+              >
+                <Student
+                  style={{ height: 20, marginRight: phone ? 0 : 7.5 }}
+                  fill={cursus ? COLORS.lightBlack : COLORS.white}
+                />
+              </Button>
+            )}
           </div>
         </div>
-        <div
+        {/* <div
           style={{ ...styles.block, display: 'flex', alignSelf: 'flex-end' }}
         >
           <Button text="fr/en" setHover={setRotate} hover={rotate}>
@@ -214,7 +224,7 @@ function Head() {
               fill={rotate ? COLORS.lightBlack : COLORS.white}
             />
           </Button>
-        </div>
+        </div> */}
       </div>
 
       {/* <div style={{ width: '100%', height: 1, backgroundColor: COLORS.grey }} /> */}

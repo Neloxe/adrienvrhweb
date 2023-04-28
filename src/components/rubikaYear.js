@@ -217,7 +217,7 @@ function RubYear() {
                 <div>Langage · C#</div>
               </div>
               <div style={{ color: COLORS.grey, paddingTop: 10 }}>
-                Langage indisociable de Unity.
+                Langage indissociable de Unity.
               </div>
             </div>
             <div

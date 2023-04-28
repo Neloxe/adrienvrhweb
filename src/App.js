@@ -38,7 +38,7 @@ const styles = {
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" errorElement={<Error />}>
-      <Route index path="" element={<Main />} />
+      <Route index path="/" element={<Main />} />
       <Route index path="frame-cgu" element={<div> TEST</div>} />
     </Route>
   )
@@ -47,7 +47,6 @@ const router = createBrowserRouter(
 function App() {
   useEffect(() => {
     document.title = 'Adrien Verhaeghe'
-    console.log(window.innerWidth)
   }, [])
   return (
     <div style={styles.app}>

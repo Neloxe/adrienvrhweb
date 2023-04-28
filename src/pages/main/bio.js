@@ -1,14 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
-import { COLORS, SIZE } from '../../export/style'
+import { COLORS, SIZE, phone } from '../../export/style'
 import pdp from '../../image/PDP.png'
 
 export default function Bio() {
   return (
     <div
       style={{
-        backgroundColor: COLORS.black,
+        backgroundColor: COLORS.lightBlack,
         height: '100vh',
         display: 'flex',
         flexDirection: 'column',
@@ -20,11 +20,11 @@ export default function Bio() {
       <div
         style={{
           fontFamily: 'SFProBold',
-          fontSize: SIZE.xl * 1.5,
-          lineHeight: 0.975,
+          fontSize: phone ? SIZE.m : SIZE.xl * 1.5,
+          lineHeight: phone ? 1 : 0.975,
           justifyContent: 'center',
-          width: 775,
-          textAlign: 'center',
+          width: phone ? '90%' : 775,
+          textAlign: phone ? '' : 'center',
         }}
       >
         {/* Student at ISEN, graduate school of science and engineering. I’m
@@ -47,18 +47,23 @@ export default function Bio() {
         style={{
           fontFamily: 'SFProMedium',
           fontSize: SIZE.m,
-          lineHeight: 0.9,
           justifyContent: 'center',
           color: COLORS.grey,
-          width: 550,
+          lineHeight: phone ? 1 : 0.975,
+          width: phone ? '90%' : 550,
         }}
       >
         {/* I have been programming for 5 years now and I'm working on a mobile
     app project alongside my studies. <br />
     <br />I have already worked in many team projects, notably at RUBIKA
     as a lead developer. */}
-        Je programme depuis 5 ans maintenant et je travaille sur un projet
-        d'application mobile parallèlement à mes études. <br /> <br />
+        Je m'appelle Adrien Verhaeghe, je suis un étudiant passionné en
+        informatique et en nouvelles technologies. Je programme dans différents
+        langages depuis 5 ans maintenant. <br />
+        <br />
+        Je travaille en ce moment sur une application mobile parallèlement à mes
+        études. <br />
+        <br />
         J'ai déjà travaillé sur de nombreux projets d'équipe, notamment chez
         RUBIKA en tant que lead developer.
       </div>

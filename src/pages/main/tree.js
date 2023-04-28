@@ -10,7 +10,7 @@
 /* eslint-disable prefer-const */
 /* eslint-disable react/react-in-jsx-scope */
 import { useEffect, useRef } from 'react'
-import { COLORS, SIZE } from '../../export/style'
+import { COLORS, SIZE, phone } from '../../export/style'
 import pdp from '../../image/PDP.png'
 import student from '../../svg/STUDENT.svg'
 import junia from '../../image/JUNIA.png'
@@ -44,7 +44,6 @@ function Tree() {
 
   function InterObs(animTarget, refToListen) {
     const Observer = new IntersectionObserver((entries) => {
-      console.log(entries.length)
       for (const entry of entries) {
         if (entry.isIntersecting) {
           anime({
@@ -226,8 +225,8 @@ function Tree() {
               style={{
                 width: 2,
                 height: 200,
-                marginLeft: '10vw',
-                marginRight: 100,
+                marginLeft: phone ? 0 : '10vw',
+                marginRight: phone ? 0 : 100,
                 background:
                   'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 45.65%)', // backgroundColor: COLORS.white,
               }}
@@ -244,7 +243,7 @@ function Tree() {
             style={{
               display: 'flex',
               padding: 10,
-              flexDirection: 'row',
+              flexDirection: phone ? 'column' : 'row',
               alignItems: 'flex-start',
               alignContent: 'space-between',
               justifyContent: 'space-between',

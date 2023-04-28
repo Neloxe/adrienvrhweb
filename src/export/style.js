@@ -16,3 +16,6 @@ export const SIZE = {
   l: 25,
   xl: 30,
 }
+
+export const phoneSize = 450
+export const phone = window.innerWidth < phoneSize

@@ -9,10 +9,10 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { useEffect, useRef, useState } from 'react'
 import anime from 'animejs/lib/anime.es.js'
-import phone from '../../svg/PHONE.svg'
+import phone2 from '../../svg/PHONE.svg'
 import back from '../../svg/BACK.svg'
 
-import { COLORS, SIZE } from '../../export/style'
+import { COLORS, SIZE, phone } from '../../export/style'
 import { ReactComponent as Quote } from '../../svg/QUOTE.svg'
 import Firebase from '../../components/firebase'
 // import phone from '../../svg/PHONE.svg'
@@ -32,22 +32,27 @@ function Contact() {
   const [twitter, setTwitter] = useState(false)
   const [git, setGit] = useState(false)
 
-  useEffect(() => {
-    anime({
-      targets: document.getElementsByClassName('circle'),
-      rotate: [-360, 360], // rotation will be distributed from -360deg to 360deg evenly between all elements
-      easing: 'linear',
-      duration: 10000,
-      loop: true,
-    })
-    anime({
-      targets: document.getElementsByClassName('circle2'),
-      rotate: [360, -360], // rotation will be distributed from -360deg to 360deg evenly between all elements
-      easing: 'linear',
-      duration: 10000,
-      loop: true,
-    })
-  }, [])
+  useEffect(
+    phone
+      ? () => {}
+      : () => {
+          anime({
+            targets: document.getElementsByClassName('circle'),
+            rotate: [-360, 360], // rotation will be distributed from -360deg to 360deg evenly between all elements
+            easing: 'linear',
+            duration: 10000,
+            loop: true,
+          })
+          anime({
+            targets: document.getElementsByClassName('circle2'),
+            rotate: [360, -360], // rotation will be distributed from -360deg to 360deg evenly between all elements
+            easing: 'linear',
+            duration: 10000,
+            loop: true,
+          })
+        },
+    []
+  )
   return (
     <div>
       <div
@@ -65,11 +70,12 @@ function Contact() {
       >
         <div>
           <img
-            src={circle}
+            src={circle2}
             className="circle"
             style={{
               position: 'absolute',
-              height: '69vh',
+              height: phone ? 'auto' : '69vh',
+              width: phone ? '90%' : 'auto',
               right: '50vw',
               top: '50vh',
               transform: 'translate(50%, -50%)',
@@ -80,7 +86,8 @@ function Contact() {
             src={circle}
             className="circle2"
             style={{
-              height: '69vh',
+              height: phone ? 'auto' : '69vh',
+              width: phone ? '90%' : 'auto',
               left: '50vw',
               top: '50vh',
               transform: 'translate(-50%, -50%)',
@@ -95,7 +102,7 @@ function Contact() {
               alignItems: 'center',
               justifyContent: 'center',
               alignContent: 'center',
-              fontSize: SIZE.xl,
+              fontSize: phone ? SIZE.m : SIZE.xl,
             }}
           >
             <div>
@@ -106,10 +113,16 @@ function Contact() {
               style={{
                 display: 'flex',
                 flexDirection: 'column',
-                paddingTop: 20,
+                paddingTop: phone ? 10 : 20,
               }}
             >
-              <div style={{ display: 'flex', flexDirection: 'row' }}>
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  gap: phone ? 10 : 0,
+                }}
+              >
                 <Button
                   invert
                   onMouseDown={() => {
@@ -119,19 +132,21 @@ function Contact() {
                   hover={discord}
                 >
                   <Icon
-                    style={{ height: 20, paddingLeft: 7.5, paddingRight: 7.5 }}
+                    style={{
+                      height: phone ? 15 : 20,
+                    }}
                     fill={discord ? COLORS.white : COLORS.lightBlack}
                   />
                 </Button>
                 <Button invert setHover={setGit} hover={git}>
                   <Icon2
-                    style={{ height: 20, paddingLeft: 7.5, paddingRight: 7.5 }}
+                    style={{ height: 20 }}
                     fill={git ? COLORS.white : COLORS.lightBlack}
                   />
                 </Button>
                 <Button invert setHover={setTwitter} hover={twitter}>
                   <Icon3
-                    style={{ height: 20, paddingLeft: 7.5, paddingRight: 7.5 }}
+                    style={{ height: 20 }}
                     fill={twitter ? COLORS.white : COLORS.lightBlack}
                   />
                 </Button>
@@ -139,9 +154,9 @@ function Contact() {
             </div>
             <div
               style={{
-                fontSize: SIZE.m,
+                fontSize: phone ? SIZE.s : SIZE.m,
                 fontFamily: 'SFProMedium',
-                paddingTop: 40,
+                paddingTop: phone ? 15 : 40,
                 textAlign: 'center',
               }}
             >
@@ -154,7 +169,7 @@ function Contact() {
                 fontSize: SIZE.m * 0.8,
                 color: COLORS.grey,
                 fontFamily: 'SFProMedium',
-                paddingTop: 20,
+                paddingTop: phone ? 10 : 20,
               }}
             >
               France, 59000 Lille

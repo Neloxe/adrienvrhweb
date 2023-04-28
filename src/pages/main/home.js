@@ -6,14 +6,13 @@
 import { useEffect } from 'react'
 import anime from 'animejs/lib/anime.es.js'
 import Lottie from 'lottie-react'
-import phone from '../../svg/PHONE.svg'
+import phone2 from '../../svg/PHONE.svg'
 import back from '../../svg/BACK.svg'
-import { COLORS, SIZE } from '../../export/style'
+import { COLORS, SIZE, phone } from '../../export/style'
 import mouse from '../../lottie/MOUSE.json'
 
 function Home() {
   let scroll = false
-
   useEffect(() => {
     document.getElementById('text').style.opacity = 0
     document.getElementById('op').style.opacity = 0
@@ -127,9 +126,9 @@ function Home() {
           style={{
             paddingLeft: 30,
             lineHeight: 0.85,
-            letterSpacing: '-15px',
-            fontSize: 200,
-            width: 1400,
+            letterSpacing: phone ? '-2.5px' : '-15px',
+            fontSize: phone ? 50 : 200,
+            width: '80%',
             zIndex: 1,
           }}
         >
@@ -140,7 +139,7 @@ function Home() {
           style={{
             position: 'relative',
             marginTop: 15,
-            width: '70%',
+            width: phone ? '90%' : '60%',
             height: 2,
             // backgroundColor: COLORS.white,
             backgroundImage:
@@ -165,7 +164,13 @@ function Home() {
       </div>
       <div
         className="mouse"
-        style={{ position: 'absolute', bottom: 10, opacity: 0, left: '50%' }}
+        style={{
+          position: 'absolute',
+          bottom: '10%',
+          opacity: 0,
+          left: '50%',
+          transform: 'translate(-50%, 0)',
+        }}
       >
         <Lottie style={{ width: 60 }} animationData={mouse} />
       </div>

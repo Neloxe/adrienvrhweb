@@ -144,7 +144,7 @@ function FirstYear({ firstRef, lastRef }) {
         <div
           style={{
             width: 2,
-            height: 600,
+            height: 500,
             marginLeft: '10vw',
             marginRight: 100,
             backgroundColor: COLORS.white,
@@ -154,7 +154,7 @@ function FirstYear({ firstRef, lastRef }) {
       <div
         style={{
           flexDirection: 'column',
-          height: 600,
+          height: 500,
         }}
       >
         <div
@@ -185,11 +185,7 @@ function FirstYear({ firstRef, lastRef }) {
             }}
           >
             <div>Première année · CIR</div>
-            <div style={{ color: COLORS.grey, paddingTop: 10 }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Purus
-              viverra accumsan in nisl nisi scelerisque eu ultrices.{' '}
-            </div>
+            <div style={{ color: COLORS.grey, paddingTop: 10 }} />
           </div>
         </div>
         <div
@@ -339,7 +335,7 @@ function FirstYear({ firstRef, lastRef }) {
                 <div>Mathématiques</div>
               </div>
               <div style={{ color: COLORS.grey, paddingTop: 10 }}>
-                Travail sur des mathématiques analytiques et arithmétique.
+                Travail sur des mathématiques analytiques et arithmétiques.
               </div>
             </div>
             <div ref={lastRef} id={14} className={14}>

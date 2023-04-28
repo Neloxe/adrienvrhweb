@@ -134,7 +134,7 @@ function SecondYear({ lastRef }) {
         <div
           style={{
             width: 2,
-            height: 650,
+            height: 550,
             marginLeft: '10vw',
             marginRight: 100,
             backgroundColor: COLORS.white,
@@ -146,7 +146,7 @@ function SecondYear({ lastRef }) {
       <div
         style={{
           flexDirection: 'column',
-          height: 650,
+          height: 550,
         }}
       >
         <div
@@ -177,11 +177,7 @@ function SecondYear({ lastRef }) {
             }}
           >
             <div>Deuxième année · CIR</div>
-            <div style={{ color: COLORS.grey, paddingTop: 10 }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Purus
-              viverra accumsan in nisl nisi scelerisque eu ultrices.{' '}
-            </div>
+            <div style={{ color: COLORS.grey, paddingTop: 10 }} />
           </div>
         </div>
         <div

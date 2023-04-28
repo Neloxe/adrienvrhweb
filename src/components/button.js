@@ -7,7 +7,7 @@
 /* eslint-disable react/no-unknown-property */
 /* eslint-disable import/extensions */
 /* eslint-disable react/react-in-jsx-scope */
-import { COLORS } from '../export/style'
+import { COLORS, phoneSize } from '../export/style'
 
 function Button({ children, setHover, hover, text, invert, onMouseDown }) {
   const styles = {
@@ -45,10 +45,14 @@ function Button({ children, setHover, hover, text, invert, onMouseDown }) {
       onMouseOut={() => {
         setHover(false)
       }}
-      style={{ ...styles.border, marginRight: 20, ...styles.selected }}
+      style={{
+        ...styles.border,
+        marginRight: window.innerWidth < phoneSize ? 0 : 20,
+        ...styles.selected,
+      }}
     >
       {children}
-      {text}
+      {window.innerWidth < phoneSize ? '' : text}
     </div>
   )
 }
