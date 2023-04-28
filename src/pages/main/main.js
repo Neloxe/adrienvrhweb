@@ -1,14 +1,11 @@
-/* eslint-disable no-unused-vars */
 import React, { useEffect } from 'react'
 import '../../App.css'
-import Lottie from 'lottie-react'
 import Head from '../../components/header'
-import { COLORS } from '../../export/style'
+import { COLORS, phone } from '../../export/style'
 import Chapter from '../../components/chapter'
 import Home from './home'
 import Tree from './tree'
 import Project from './project'
-import phone from '../../lottie/PHONE.json'
 import Contact from './contact'
 
 import { ReactComponent as Student } from '../../svg/STUDENT2.svg'
@@ -75,19 +72,22 @@ function Main() {
           />
         </Chapter>
         <Contact />
-
-        <Chapter id="cursus" text="Cursus">
-          <Student
-            style={{
-              height: 35,
-              width: 35,
-              paddingLeft: 7.5,
-              paddingRight: 7.5,
-            }}
-            fill={COLORS.white}
-          />
-        </Chapter>
-        <Tree />
+        {!phone && (
+          <>
+            <Chapter id="cursus" text="Cursus">
+              <Student
+                style={{
+                  height: 35,
+                  width: 35,
+                  paddingLeft: 7.5,
+                  paddingRight: 7.5,
+                }}
+                fill={COLORS.white}
+              />
+            </Chapter>
+            <Tree />
+          </>
+        )}
       </div>
       {/* <div
         style={{

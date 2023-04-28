@@ -125,6 +125,7 @@ function Tree() {
       width: 750,
       height: 190,
       borderRadius: '35px',
+      cursor: 'pointer',
     },
   }
 
@@ -150,62 +151,6 @@ function Tree() {
           alignItems: 'center',
         }}
       >
-        {/* <div
-          style={{
-            height: '100vh',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignContent: 'center',
-            alignItems: 'center',
-          }}
-        >
-          <div
-            style={{
-              fontFamily: 'SFProBold',
-              fontSize: SIZE.xl * 1.5,
-              lineHeight: 0.975,
-              justifyContent: 'center',
-              width: 775,
-              textAlign: 'center',
-            }}
-          >
-            Student at ISEN, graduate school of science and engineering. I’m
-            looking for a work study program in IT for my two last year of
-            engineering school.
-            Etudiant à l'ISEN, école supérieure des sciences et d'ingénierie. Je
-            suis à la recherche d'une alternance en informatique pour mes deux
-            dernières années d'école d'ingénieur.
-          </div>
-          <img
-            src={pdp}
-            style={{
-              width: 175,
-              borderRadius: 100,
-              boxShadow: 'inset 0px 0px 15px #000000',
-              margin: 60,
-            }}
-          />
-          <div
-            style={{
-              fontFamily: 'SFProMedium',
-              fontSize: SIZE.m,
-              lineHeight: 0.9,
-              justifyContent: 'center',
-              color: COLORS.grey,
-              width: 550,
-            }}
-          >
-            I have been programming for 5 years now and I'm working on a mobile
-            app project alongside my studies. <br />
-            <br />I have already worked in many team projects, notably at RUBIKA
-            as a lead developer.
-            Je programme depuis 5 ans maintenant et je travaille sur un projet
-            d'application mobile parallèlement à mes études. <br /> <br />
-            J'ai déjà travaillé sur de nombreux projets d'équipe, notamment chez
-            RUBIKA en tant que lead developer.
-          </div>
-        </div> */}
         <div
           style={{
             width: '75%',
@@ -238,7 +183,12 @@ function Tree() {
             }}
           />
         </div>
-        <div style={styles.bigStep}>
+        <div
+          style={styles.bigStep}
+          onClick={() => {
+            window.open('https://www.junia.com/fr/')
+          }}
+        >
           <div
             style={{
               display: 'flex',
@@ -311,7 +261,13 @@ function Tree() {
           </div>
         </div>
         <SecondYear lastRef={lastSecondYearRef} />
-        <div ref={bcdRef} style={styles.bigStep}>
+        <div
+          ref={bcdRef}
+          style={styles.bigStep}
+          onClick={() => {
+            window.open('https://bettercalldave.io/')
+          }}
+        >
           <div
             style={{
               display: 'flex',
@@ -392,7 +348,13 @@ function Tree() {
         </div>
         <InternShip lastRef={lastIntershipRef} />
         <FirstYear firstRef={firstFirstYearRef} lastRef={lastFirstYearRef} />
-        <div ref={rubikaRef} style={styles.bigStep}>
+        <div
+          ref={rubikaRef}
+          style={styles.bigStep}
+          onClick={() => {
+            window.open('https://rubika-edu.com/ecole/#classements')
+          }}
+        >
           <div
             style={{
               display: 'flex',
