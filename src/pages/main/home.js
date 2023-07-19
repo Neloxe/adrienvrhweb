@@ -10,6 +10,7 @@ import phone2 from '../../svg/PHONE.svg'
 import back from '../../svg/BACK.svg'
 import { COLORS, SIZE, phone } from '../../export/style'
 import mouse from '../../lottie/MOUSE.json'
+import ParticlesComponent from '../../components/particles'
 
 function Home() {
   let scroll = false
@@ -103,6 +104,7 @@ function Home() {
       style={{
         height: '100vh',
         width: '100%',
+        zIndex: 10,
         backgroundColor: COLORS.lightBlack,
         display: 'flex',
         justifyContent: 'flex-start',
@@ -126,8 +128,9 @@ function Home() {
           style={{
             paddingLeft: 30,
             lineHeight: 0.85,
-            letterSpacing: phone ? '-2.5px' : '-15px',
+            // letterSpacing: phone ? '-2.5px' : '-15px',
             fontSize: phone ? 50 : 200,
+            fontFamily: 'SFProBold',
             width: '80%',
             zIndex: 1,
           }}
@@ -141,6 +144,7 @@ function Home() {
             marginTop: 15,
             width: phone ? '90%' : '60%',
             height: 2,
+            zIndex: 10,
             // backgroundColor: COLORS.white,
             backgroundImage:
               'linear-gradient(336deg, rgba(147,245,236,1) 0%, rgba(167,123,243,1) 100%)',
@@ -168,6 +172,7 @@ function Home() {
           position: 'absolute',
           bottom: '10%',
           opacity: 0,
+          zIndex: 10,
           left: '50%',
           transform: 'translate(-50%, 0)',
         }}

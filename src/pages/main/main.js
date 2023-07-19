@@ -13,6 +13,7 @@ import { ReactComponent as BioIcon } from '../../svg/BIO.svg'
 import { ReactComponent as Projets } from '../../svg/PROJETS.svg'
 import { ReactComponent as ContactIcon } from '../../svg/CONTACT.svg'
 import Bio from './bio'
+import ParticlesComponent from '../../components/particles'
 
 const styles = {
   app: {
@@ -31,7 +32,8 @@ function Main() {
   }, [])
   return (
     <div style={styles.app}>
-      <div>
+      <ParticlesComponent />
+      <div style={{ zIndex: 10000 }}>
         <Head />
         <Home />
         <Chapter id="bio" text="Bio">
@@ -90,24 +92,25 @@ function Main() {
         )}
       </div>
       {/* <div
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignContent: 'center',
-          alignItems: 'center',
-          width: '100%',
-          height: '100%',
-          flexDirection: 'column',
-          backgroundColor: COLORS.lightBlack,
-          fontFamily: 'SFProBold',
-          textAlign: 'center',
-        }}
-      >
-        <Lottie style={{ width: 100 }} animationData={phone} />
-        <div>
-          En cours de développement <br /> sur mobile...
-        </div>
-      </div> */}
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignContent: 'center',
+        alignItems: 'center',
+        width: '100%',
+        height: '100%',
+        flexDirection: 'column',
+        backgroundColor: COLORS.lightBlack,
+        fontFamily: 'SFProBold',
+        textAlign: 'center',
+      }}
+    >
+      <Lottie style={{ width: 100 }} animationData={phone} />
+      <div>
+        En cours de développement <br /> sur mobile...
+      </div>
+    
+    </div> */}
     </div>
   )
 }

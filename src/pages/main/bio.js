@@ -14,6 +14,7 @@ export default function Bio() {
         flexDirection: 'column',
         justifyContent: 'center',
         alignContent: 'center',
+        zIndex: 10,
         alignItems: 'center',
       }}
     >
@@ -22,6 +23,7 @@ export default function Bio() {
           fontFamily: 'SFProBold',
           fontSize: phone ? SIZE.m : SIZE.xl * 1.5,
           lineHeight: phone ? 1 : 0.975,
+          zIndex: 10,
           justifyContent: 'center',
           width: phone ? '90%' : 775,
           textAlign: phone ? '' : 'center',
@@ -39,6 +41,7 @@ export default function Bio() {
         style={{
           width: 175,
           borderRadius: 100,
+          zIndex: 10,
           boxShadow: 'inset 0px 0px 15px #000000',
           margin: 60,
         }}
@@ -48,6 +51,7 @@ export default function Bio() {
           fontFamily: 'SFProMedium',
           fontSize: SIZE.m,
           justifyContent: 'center',
+          zIndex: 10,
           color: COLORS.grey,
           lineHeight: phone ? 1 : 0.975,
           width: phone ? '90%' : 550,

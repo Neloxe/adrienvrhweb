@@ -23,6 +23,8 @@ import { ReactComponent as Projets } from './svg/PROJETS.svg'
 import { ReactComponent as ContactIcon } from './svg/CONTACT.svg'
 import Main from './pages/main/main'
 import Error from './pages/main/error'
+import ParticlesComponent from './components/particles'
+import CGUPage from './pages/main/cgu-frame'
 
 const styles = {
   app: {
@@ -39,7 +41,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" errorElement={<Error />}>
       <Route index path="/" element={<Main />} />
-      <Route index path="frame-cgu" element={<div> TEST</div>} />
+      <Route index path="frame-cgu" element={<CGUPage />} />
     </Route>
   )
 )

@@ -78,6 +78,7 @@ function Tree() {
       display: 'flex',
       flexDirection: 'row',
       paddingBottom: 40,
+      zIndex: 10,
       width: 750,
     },
     pdp: {
@@ -86,6 +87,7 @@ function Tree() {
       borderRadius: 50,
       marginRight: 30,
       width: 300,
+      zIndex: 10,
       height: 300,
     },
     step: {
@@ -94,12 +96,15 @@ function Tree() {
       alignItems: 'flex-start',
       justifyContent: 'flex-start',
       flexDirection: 'row',
+      zIndex: 10,
+
       paddingLeft: 20,
       transform: 'translate(-152px, 0)',
     },
     stepText: {
       fontFamily: 'SFProBold',
       fontSize: SIZE.m * 0.9,
+      zIndex: 10,
       display: 'flex',
       flexDirection: 'column',
       transform: 'translate(0, 15px)',
@@ -109,6 +114,7 @@ function Tree() {
       backgroundColor: COLORS.lightBlack,
       borderRadius: 1000,
       display: 'flex',
+      zIndex: 10,
       padding: 10,
       alignItems: 'center',
       alignContent: 'center',
@@ -118,11 +124,14 @@ function Tree() {
       display: 'flex',
       flexDirection: 'row',
       alignItems: 'center',
+      zIndex: 10,
+
       paddingTop: 20,
     },
     bigStep: {
       backgroundColor: COLORS.white,
       width: 750,
+      zIndex: 10,
       height: 190,
       borderRadius: '35px',
       cursor: 'pointer',
@@ -134,6 +143,7 @@ function Tree() {
       style={{
         width: '100%',
         paddingTop: 80,
+        zIndex: 10,
         backgroundColor: COLORS.lightBlack,
         display: 'flex',
         justifyContent: 'center',
@@ -141,13 +151,12 @@ function Tree() {
         alignContent: 'center',
       }}
     >
-      {/* <Mouse target={bcdRef} ref={mouseRef} /> */}
-
       <div
         style={{
           width: '70%',
           display: 'flex',
           flexDirection: 'column',
+          zIndex: 10,
           alignItems: 'center',
         }}
       >
@@ -360,6 +369,7 @@ function Tree() {
               display: 'flex',
               padding: 10,
               flexDirection: 'row',
+              zIndex: 10,
               alignItems: 'flex-start',
               alignContent: 'space-between',
               justifyContent: 'space-between',
@@ -370,6 +380,7 @@ function Tree() {
               style={{
                 display: 'flex',
                 flexDirection: 'row',
+                zIndex: 10,
               }}
             >
               <div
@@ -378,12 +389,14 @@ function Tree() {
                   flexDirection: 'column',
                   justifyContent: 'flex-start',
                   padding: 15,
+                  zIndex: 10,
                   fontSize: SIZE.m * 0.9,
                 }}
               >
                 <div
                   style={{
                     display: 'flex',
+                    zIndex: 10,
                     flexDirection: 'row',
                     justifyContent: 'flex-start',
                     paddingBottom: 10,
@@ -394,13 +407,20 @@ function Tree() {
                     style={{
                       width: 20,
                       marginRight: 5,
+                      zIndex: 10,
                     }}
                   />
-                  <div style={{ fontFamily: 'SFProBold' }}>
+                  <div style={{ fontFamily: 'SFProBold', zIndex: 10 }}>
                     École game design · RUBIKA{' '}
                   </div>
                 </div>
-                <div style={{ fontFamily: 'SFProBold', color: COLORS.grey }}>
+                <div
+                  style={{
+                    fontFamily: 'SFProBold',
+                    color: COLORS.grey,
+                    zIndex: 10,
+                  }}
+                >
                   RUBIKA est née du regroupement de trois écoles pionnières de
                   la création numérique : l’Institut Supérieur de Design,
                   Supinfocom et Supinfogame. Ces écoles se sont distinguées par
@@ -418,11 +438,15 @@ function Tree() {
                 height: '170px',
                 display: 'flex',
                 alignItems: 'center',
+                zIndex: 10,
                 alignContent: 'center',
                 justifyContent: 'center',
               }}
             >
-              <img src={rubika} style={{ width: '150px', padding: 100 }} />
+              <img
+                src={rubika}
+                style={{ width: '150px', padding: 100, zIndex: 10 }}
+              />
             </div>
           </div>
         </div>

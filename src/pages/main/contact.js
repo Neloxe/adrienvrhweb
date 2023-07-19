@@ -60,10 +60,10 @@ function Contact() {
           height: '100vh',
           width: '100%',
           position: 'relative',
-          backgroundColor: COLORS.lightBlack,
           justifyContent: 'center',
           alignItems: 'center',
           alignContent: 'center',
+          zIndex: 10,
           display: 'flex',
           flexDirection: 'row',
         }}
@@ -76,6 +76,7 @@ function Contact() {
               position: 'absolute',
               height: phone ? 'auto' : '69vh',
               width: phone ? '90%' : 'auto',
+              zIndex: 10,
               right: '50vw',
               top: '50vh',
               transform: 'translate(50%, -50%)',
@@ -88,6 +89,7 @@ function Contact() {
             style={{
               height: phone ? 'auto' : '69vh',
               width: phone ? '90%' : 'auto',
+              zIndex: 10,
               left: '50vw',
               top: '50vh',
               transform: 'translate(-50%, -50%)',
@@ -126,7 +128,9 @@ function Contact() {
                 <Button
                   invert
                   onMouseDown={() => {
-                    window.open('')
+                    window.open(
+                      'https://discordapp.com/users/853366052918788107'
+                    )
                   }}
                   setHover={setDiscord}
                   hover={discord}
@@ -138,13 +142,27 @@ function Contact() {
                     fill={discord ? COLORS.white : COLORS.lightBlack}
                   />
                 </Button>
-                <Button invert setHover={setGit} hover={git}>
+                <Button
+                  invert
+                  setHover={setGit}
+                  hover={git}
+                  onMouseDown={() => {
+                    window.open('https://twitter.com/AdrienVerhaegh2')
+                  }}
+                >
                   <Icon2
                     style={{ height: 20 }}
                     fill={git ? COLORS.white : COLORS.lightBlack}
                   />
                 </Button>
-                <Button invert setHover={setTwitter} hover={twitter}>
+                <Button
+                  invert
+                  setHover={setTwitter}
+                  hover={twitter}
+                  onMouseDown={() => {
+                    window.open('https://github.com/Neloxe')
+                  }}
+                >
                   <Icon3
                     style={{ height: 20 }}
                     fill={twitter ? COLORS.white : COLORS.lightBlack}

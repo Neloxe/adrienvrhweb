@@ -1,0 +1,77 @@
+/* Reset des styles par défaut pour éviter les incohérences */
+body, h1, h2, p, ul, li, a {
+  z-index: 1000;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: 'black';
+  z-index: 1000;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.cgu-container {
+  max-width: 800px;
+  z-index: 1000;
+  margin: 0 auto;
+}
+
+.cgu-title {
+  font-size: 24px;
+  font-weight: bold;
+  z-index: 1000;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.cgu-last-updated {
+  color: #777;
+  z-index: 1000;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 20px;
+  margin: 20px 0 10px;
+  z-index: 1000;
+}
+
+p {
+  margin-bottom: 15px;
+  z-index: 1000;
+}
+
+ul {
+  list-style: disc;
+  margin-left: 30px;
+  z-index: 1000;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  z-index: 1000;
+}
+
+a:hover {
+  text-decoration: underline;
+  z-index: 1000;
+}
+
+.cgu-contact {
+  margin-top: 20px;
+  z-index: 1000;
+  font-size: 14px;
+  color: #777;
+}
+
+/* Style pour les paragraphes avec classe "important" */
+p.important {
+  z-index: 1000;
+  font-weight: bold;
+  color: #ff5c5c;
+}

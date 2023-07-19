@@ -60,6 +60,7 @@ function Chapter({ children, text, id }) {
             display: 'flex',
             flexDirection: 'column',
             alignContent: 'center',
+            zIndex: 10,
             alignItems: 'center',
             justifyContent: 'center',
           }}
@@ -69,6 +70,7 @@ function Chapter({ children, text, id }) {
             ref={chapterRef}
             style={{
               paddingTop: 10,
+              zIndex: 10,
               fontFamily: 'SFProBold',
               fontSize: 17.5,
               textAlign: 'center',

@@ -30,6 +30,7 @@ function Project() {
   const styles = {
     phone: {
       height: '80vh',
+      zIndex: 10,
     },
   }
 
@@ -68,11 +69,12 @@ function Project() {
   }, [])
 
   return (
-    <div>
+    <div style={{ zIndex: 10 }}>
       <div
         style={{
           height: phone ? 'auto' : '100vh',
           width: '100%',
+          zIndex: 10,
           backgroundColor: COLORS.lightBlack,
           justifyContent: 'center',
           alignItems: 'center',
@@ -85,6 +87,7 @@ function Project() {
           style={{
             width: '42.5vh',
             display: 'flex',
+            zIndex: 10,
             flexDirection: phone ? 'column' : 'row',
             justifyContent: 'flex-end',
             alignItems: 'center',
@@ -93,13 +96,19 @@ function Project() {
         >
           {phone && (
             <div
-              style={{ position: 'relative', width: '100vw', height: '75vh' }}
+              style={{
+                position: 'relative',
+                width: '100vw',
+                zIndex: 10,
+                height: '75vh',
+              }}
             >
               <img
                 src={event}
                 style={{
                   width: '55vw',
                   position: 'absolute',
+                  zIndex: 10,
                   left: '50%',
                   transform: 'translate(-65%, 35%)',
                 }}
@@ -110,6 +119,7 @@ function Project() {
                 style={{
                   width: '55vw',
                   position: 'absolute',
+                  zIndex: 10,
                   left: '50%',
                   transform: 'translate(-35%, 15%)',
                 }}
@@ -120,7 +130,11 @@ function Project() {
           {phone && (
             <img
               src={store}
-              style={{ width: phone ? '80%' : 350, paddingTop: phone ? 0 : 30 }}
+              style={{
+                width: phone ? '80%' : 350,
+                paddingTop: phone ? 0 : 30,
+                zIndex: 10,
+              }}
               alt="website logo"
             />
           )}
@@ -135,6 +149,7 @@ function Project() {
             paddingLeft: 40,
             fontSize: phone ? SIZE.xl * 1.5 : SIZE.xl * 2.4,
             fontFamily: 'SFProBold',
+            zIndex: 10,
             fontWeight: 'bold',
             display: 'flex',
             flexDirection: 'row',
@@ -147,6 +162,7 @@ function Project() {
                 display: 'flex',
                 flexDirection: 'row',
                 alignItems: 'center',
+                zIndex: 10,
               }}
             >
               <div>Frame It</div>
@@ -157,6 +173,7 @@ function Project() {
                     'linear-gradient(to bottom right, #93F5EC 20%, #A77BF3 84%)',
                   fontSize: SIZE.s,
                   color: COLORS.lightBlack,
+                  zIndex: 10,
                   padding: 5,
                   marginLeft: 15,
                 }}
@@ -168,6 +185,7 @@ function Project() {
               style={{
                 fontSize: SIZE.m,
                 color: COLORS.grey,
+                zIndex: 10,
                 paddingTop: 10,
                 width: phone ? '80%' : 350,
               }}
@@ -180,7 +198,11 @@ function Project() {
             {!phone && (
               <img
                 src={store}
-                style={{ width: phone ? '80%' : 350, paddingTop: 30 }}
+                style={{
+                  width: phone ? '80%' : 350,
+                  paddingTop: 30,
+                  zIndex: 1000,
+                }}
                 alt="website logo"
               />
             )}
@@ -197,6 +219,7 @@ function Project() {
             alignItems: 'center',
             alignContent: 'center',
             display: 'flex',
+            zIndex: 10,
             flexDirection: 'row',
           }}
         >
@@ -205,6 +228,7 @@ function Project() {
               width: '50%',
               height: 400,
               paddingTop: 40,
+              zIndex: 10,
               display: 'flex',
               justifyContent: 'center',
               alignContent: 'flex-start',
@@ -212,11 +236,14 @@ function Project() {
               fontSize: SIZE.xl,
             }}
           >
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <div
+              style={{ display: 'flex', flexDirection: 'column', zIndex: 10 }}
+            >
               Le concept
               <div
                 style={{
                   fontSize: SIZE.m,
+                  zIndex: 10,
                   color: COLORS.grey,
                   paddingTop: 10,
                   width: 350,
@@ -234,6 +261,7 @@ function Project() {
               fontFamily: 'SFProBold',
               fontWeight: 'bold',
               margin: 30,
+              zIndex: 10,
               marginRight: '10%',
               display: 'flex',
               flexDirection: 'row',
@@ -244,12 +272,14 @@ function Project() {
               style={{
                 display: 'flex',
                 alignContent: 'flex-start',
+                zIndex: 10,
               }}
             >
               <Quote
                 style={{
                   paddingTop: 10,
                   paddingRight: 10,
+                  zIndex: 10,
                   width: 35,
                   height: 35,
                   fill: '#93F5EC',
@@ -273,6 +303,7 @@ function Project() {
                   fontSize: SIZE.m,
                   color: COLORS.grey,
                   paddingTop: 10,
+                  zIndex: 10,
                 }}
               >
                 © Frame It, 2023.
@@ -296,6 +327,7 @@ function Project() {
           alignItems: 'center',
           alignContent: 'center',
           display: 'flex',
+          zIndex: 10,
           flexDirection: phone ? 'column' : 'row',
         }}
       >
@@ -314,6 +346,7 @@ function Project() {
               style={{
                 height: '80vh',
                 display: 'flex',
+                zIndex: 10,
                 justifyContent: 'flex-start',
               }}
             >
@@ -322,11 +355,11 @@ function Project() {
                 style={{
                   display: 'flex',
                   paddingTop: 80,
-
                   flexDirection: 'column',
                   fontFamily: 'SFProBold',
                   fontSize: SIZE.xl,
                   textAlign: 'end',
+                  zIndex: 10,
                 }}
               >
                 Invitez vos amis
@@ -337,6 +370,7 @@ function Project() {
                     paddingTop: 10,
                     width: 300,
                     textAlign: 'end',
+                    zIndex: 10,
                   }}
                 >
                   Créer des événements avec l'ensemble de vos contacts lors
@@ -387,6 +421,7 @@ function Project() {
             position: 'absolute',
             width: 20,
             height: 20,
+            zIndex: 10,
           }}
           ref={targetRef}
         />
