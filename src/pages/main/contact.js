@@ -1,3 +1,7 @@
+/* eslint-disable no-script-url */
+/* eslint-disable no-return-assign */
+/* eslint-disable react/jsx-no-script-url */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable react/void-dom-elements-no-children */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable no-restricted-syntax */
@@ -9,6 +13,7 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { useEffect, useRef, useState } from 'react'
 import anime from 'animejs/lib/anime.es.js'
+import { Link } from 'react-router-dom'
 import phone2 from '../../svg/PHONE.svg'
 import back from '../../svg/BACK.svg'
 
@@ -180,7 +185,7 @@ function Contact() {
             >
               adrienvrh@proton.me
               <br />
-              +33651929058
+              +33 6 51 92 90 58
             </div>
             <div
               style={{

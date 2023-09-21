@@ -9,7 +9,15 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { COLORS, phoneSize } from '../export/style'
 
-function Button({ children, setHover, hover, text, invert, onMouseDown }) {
+function Button({
+  children,
+  setHover,
+  hover,
+  text,
+  invert,
+  onMouseDown,
+  padding,
+}) {
   const styles = {
     border: {
       zIndex: 10,
@@ -19,7 +27,7 @@ function Button({ children, setHover, hover, text, invert, onMouseDown }) {
       justifyContent: 'center',
       alignContent: 'center',
       display: 'flex',
-      padding: 9,
+      padding: padding === undefined ? 9 : padding,
     },
     selected: {
       backgroundColor: invert

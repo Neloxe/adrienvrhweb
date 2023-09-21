@@ -11,7 +11,7 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { useEffect, useRef } from 'react'
 import { COLORS, SIZE, phone } from '../../export/style'
-import pdp from '../../image/PDP.png'
+import pdp from '../../image/PDP.jpg'
 import student from '../../svg/STUDENT.svg'
 import junia from '../../image/JUNIA.png'
 import rubika from '../../image/RUBIKA.png'

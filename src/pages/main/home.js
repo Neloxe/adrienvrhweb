@@ -132,7 +132,7 @@ function Home() {
             fontSize: phone ? 50 : 200,
             fontFamily: 'SFProBold',
             width: '80%',
-            zIndex: 1,
+            zIndex: 100,
           }}
         >
           Student <br /> Developer

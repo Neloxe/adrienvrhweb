@@ -8,23 +8,21 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { useEffect, useRef } from 'react'
 import anime from 'animejs/lib/anime.es.js'
-import phone2 from '../../svg/PHONE.svg'
-import back from '../../svg/BACK.svg'
-
+import appstore from '../../image/appstore.png'
+import googlestore from '../../image/googlestore.png'
 import { COLORS, SIZE, phone } from '../../export/style'
 import { ReactComponent as Quote } from '../../svg/QUOTE.svg'
-import Firebase from '../../components/firebase'
-// import phone from '../../svg/PHONE.svg'
 import store from '../../image/STORE.png'
 import Chapter from '../../components/chapter'
 import { ReactComponent as Iphone } from '../../svg/IPHONE.svg'
-import main from '../../image/MAIN.png'
 import event from '../../image/EVENT.png'
-import profil from '../../image/PROFIL.png'
+import profil from '../../image/MAIN.png'
 import step1 from '../../image/STEP1.png'
 import step2 from '../../image/STEP2.png'
 import step3 from '../../image/STEP3.png'
 import splash from '../../image/SPLASH.png'
+import Button from '../../components/button'
+import { googleStoreLink, iosStoreLink } from '../../export/link'
 
 function Project() {
   const styles = {
@@ -128,15 +126,43 @@ function Project() {
             </div>
           )}
           {phone && (
-            <img
-              src={store}
+            <div
               style={{
-                width: phone ? '80%' : 350,
-                paddingTop: phone ? 0 : 30,
-                zIndex: 10,
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'center',
+                width: '100vw',
               }}
-              alt="website logo"
-            />
+            >
+              <Button
+                onMouseDown={() => {
+                  window.open(googleStoreLink)
+                }}
+              >
+                <img
+                  src={googlestore}
+                  style={{
+                    zIndex: 10,
+                    width: '40vw',
+                  }}
+                  alt="website logo"
+                />
+              </Button>
+              <Button
+                onMouseDown={() => {
+                  window.open(iosStoreLink)
+                }}
+              >
+                <img
+                  src={appstore}
+                  style={{
+                    zIndex: 10,
+                    width: '40vw',
+                  }}
+                  alt="website logo"
+                />
+              </Button>
+            </div>
           )}
           {!phone && (
             <img src={splash} style={styles.phone} alt="website logo" />
@@ -196,15 +222,47 @@ function Project() {
               de plus entièrement trié par l'application.
             </div>
             {!phone && (
-              <img
-                src={store}
+              <div
                 style={{
-                  width: phone ? '80%' : 350,
-                  paddingTop: 30,
-                  zIndex: 1000,
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'center',
+                  alignContent: 'center',
+                  alignItems: 'center',
+                  paddingTop: 20,
                 }}
-                alt="website logo"
-              />
+              >
+                <Button
+                  onMouseDown={() => {
+                    window.open(googleStoreLink)
+                  }}
+                  padding={0}
+                >
+                  <img
+                    src={googlestore}
+                    style={{
+                      zIndex: 10,
+                      width: 200,
+                    }}
+                    alt="website logo"
+                  />
+                </Button>
+                <Button
+                  onMouseDown={() => {
+                    window.open(iosStoreLink)
+                  }}
+                  padding={0}
+                >
+                  <img
+                    src={appstore}
+                    style={{
+                      zIndex: 10,
+                      width: 200,
+                    }}
+                    alt="website logo"
+                  />
+                </Button>
+              </div>
             )}
           </div>
         </div>

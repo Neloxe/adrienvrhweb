@@ -101,9 +101,9 @@ function CGUPage() {
 
       <h2>Loi Applicable</h2>
       <p>
-        Les présentes CGU sont régies par les lois en vigueur dans [Indiquer le
-        pays ou la région] et tout litige relatif à ces conditions sera soumis à
-        la compétence exclusive des tribunaux compétents de cette juridiction.
+        Les présentes CGU sont régies par les lois en vigueur en France et tout
+        litige relatif à ces conditions sera soumis à la compétence exclusive
+        des tribunaux compétents de cette juridiction.
       </p>
 
       <p className="cgu-contact">
@@ -113,7 +113,6 @@ function CGUPage() {
         <a href="mailto:adrienverhaeghe@gmail.com">adrienverhaeghe@gmail.com</a>
         .
       </p>
-
       <p>
         Merci d'utiliser Frame It et profitez pleinement de vos expériences
         d'événements partagées !

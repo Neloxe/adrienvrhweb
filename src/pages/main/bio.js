@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
 import { COLORS, SIZE, phone } from '../../export/style'
-import pdp from '../../image/PDP.png'
+import pdp from '../../image/PDP.jpg'
 
 export default function Bio() {
   return (
@@ -42,8 +42,10 @@ export default function Bio() {
           width: 175,
           borderRadius: 100,
           zIndex: 10,
+          aspectRatio: 1,
           boxShadow: 'inset 0px 0px 15px #000000',
           margin: 60,
+          objectFit: 'cover',
         }}
       />
       <div
