@@ -2,7 +2,7 @@
 import React from 'react'
 import '../css/cgu.css' // Fichier de style CSS externe pour la page
 
-function CGUPage() {
+function CGUframeApp() {
   return (
     <div className="cgu-container">
       <h1 className="cgu-title">
@@ -121,4 +121,4 @@ function CGUPage() {
   )
 }
 
-export default CGUPage
+export default CGUframeApp

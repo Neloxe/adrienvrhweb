@@ -24,8 +24,9 @@ import { ReactComponent as ContactIcon } from './svg/CONTACT.svg'
 import Main from './pages/main/main'
 import Error from './pages/main/error'
 import ParticlesComponent from './components/particles'
-import CGUPage from './pages/main/cgu-frame'
 import StoreLinkFrame from './pages/main/store-link-frame'
+import CGUframeApp from './pages/main/cgu-frame'
+import CGUnosApp from './pages/main/cgu-nosapp'
 
 const styles = {
   app: {
@@ -42,7 +43,8 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" errorElement={<Error />}>
       <Route index path="/" element={<Main />} />
-      <Route index path="frame-cgu" element={<CGUPage />} />
+      <Route index path="frame-cgu" element={<CGUframeApp />} />
+      <Route index path="nosapp-cgu" element={<CGUnosApp />} />
       <Route index path="frame-store-link" element={<StoreLinkFrame />} />
     </Route>
   )
